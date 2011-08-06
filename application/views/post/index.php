@@ -36,10 +36,11 @@
 			$paragraph_vibe = -3;
 		}
 		
-		$paragraph_classes[] = 'vibe' . (string) $paragraph_vibe;
+		$data_vibe = 'vibe' . (string) $paragraph_vibe;
+		$paragraph_classes[] = $data_vibe;
 	
 		// Output the tag with all relevant classes and stuff
-		echo '<' . $paragraph_tag . ' id="para_' . $paragraph_id . '" class="para ' . implode(' ', $paragraph_classes) . '">' . $paragraphs[2][$paragraph_id] . '<span class="sharevibe"><a href="#" class="vibe-up" title="I\'m feeling this!"></a><a href="#" title="I\'m not feeling this!" class="vibe-down"></a></span>
+		echo '<' . $paragraph_tag . ' data-vibe="'.$data_vibe.'" id="para_' . $paragraph_id . '" class="para ' . implode(' ', $paragraph_classes) . '">' . $paragraphs[2][$paragraph_id] . '<span class="sharevibe"><a href="#" class="vibe-up" title="I\'m feeling this!"></a><a href="#" title="I\'m not feeling this!" class="vibe-down"></a></span>
 		</' . $paragraph_tag . '>';
 	}
 	
@@ -80,7 +81,7 @@
 		</p>
 		
 		<p>
-			Toggle vibe heat map
+			<a href="#" class="toggleHeatMap">Toggle vibe heat map
 		</p>
 	</div>
 	
