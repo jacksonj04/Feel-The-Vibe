@@ -20,6 +20,6 @@ function hideHeatMap(e)
 
 $(function(){
 
-	$('#toggleHeatMap').toggle(showHeatMap, hideHeatMap);
+	$('#toggleHeatMap').toggle(hideHeatMap, showHeatMap);
 
 });
