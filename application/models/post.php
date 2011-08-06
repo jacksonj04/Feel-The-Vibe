@@ -17,7 +17,7 @@ class Post extends CI_Model
 			$title = trim($title);
 			$content = trim($content);
 			
-			if ( $title !== '' || $content !== '')
+			if ( $title == '' || $content == '')
 			{
 				throw new Exception ('Empty title or content');
 			}
