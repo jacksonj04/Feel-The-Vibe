@@ -8,7 +8,6 @@
 <head> 
 	<meta charset="utf-8"> 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-	<link rel="dns-prefetch" href="//cwd.online.lincoln.ac.uk"> 
 	<link rel="dns-prefetch" href="//c94471.r71.cf3.rackcdn.com"> 
 	<link rel="dns-prefetch" href="//c94471.ssl.cf3.rackcdn.com"> 
 	<link rel="dns-prefetch" href="//c95725.r25.cf3.rackcdn.com"> 
@@ -19,8 +18,6 @@
 	<meta name="author" content="Team Feel The Vibe"> 
 	
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0"> 
-	<link rel="shortcut icon" href="http://c94471.r71.cf3.rackcdn.com/favicon.ico"> 
-	<link rel="apple-touch-icon" href="http://c94471.r71.cf3.rackcdn.com/icon.png"> 
  
 	<link rel="stylesheet" href="http://c94471.r71.cf3.rackcdn.com/cwd.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/vibe.css"> 
