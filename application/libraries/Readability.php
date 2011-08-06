@@ -101,12 +101,17 @@ class Readability
 	const FLAG_WEIGHT_CLASSES = 2;
 	const FLAG_CLEAN_CONDITIONALLY = 4;
 	
+	function __construct()
+	{
+		
+	}
+	
 	/**
 	* Create instance of Readability
 	* @param string UTF-8 encoded string
 	* @param string (optional) URL associated with HTML (used for footnotes)
 	*/	
-	function __construct($html, $url=null)
+	function get($html, $url=null)
 	{
 		/* Turn all double br's into p's */
 		/* Note, this is pretty costly as far as processing goes. Maybe optimize later. */
