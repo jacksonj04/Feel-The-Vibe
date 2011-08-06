@@ -51,7 +51,7 @@ class Parser extends CI_Model
 				// Tidy!
 				if (function_exists('tidy_parse_string'))
 				{
-					$tidy = tidy_parse_string($this->body, array('indent'=>true, 'show-body-only' => true), 'UTF8');
+					$tidy = tidy_parse_string($this->content, array('indent'=>TRUE, 'show-body-only' => TRUE), 'UTF8');
 					$tidy->cleanRepair();
 					$this->content = $tidy->value;
 				}
