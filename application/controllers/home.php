@@ -7,7 +7,7 @@ class Home extends CI_Controller {
 	
 		$head['currentpage'] = 'home';
 	
-		$this->load->view('inc/head');
+		$this->load->view('inc/head', $head);
 		$this->load->view('home');
 		$this->load->view('inc/foot');
 	}
