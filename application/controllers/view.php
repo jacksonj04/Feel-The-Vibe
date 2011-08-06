@@ -46,6 +46,8 @@ class View extends CI_Controller {
 		{
 			$this->load->model('post');
 			$url = $this->input->post('url');
+			
+			die(var_dump($url));
 					
 			if ($this->parser->url($url))
 			{
