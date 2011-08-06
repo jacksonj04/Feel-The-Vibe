@@ -1,5 +1,5 @@
 #viewer p {
-	padding: 5px 45px 5px 10px;
+	padding: 5px 50px 5px 10px;
 	position: relative;
 }
 
@@ -31,18 +31,19 @@
 }
 
 .vibe-up, .vibe-down {
-	background: url(http://c95725.r25.cf3.rackcdn.com/000000-16-2-73.png) no-repeat;
+	background: url(http://c95725.r25.cf3.rackcdn.com/2d8b37-16-2-73.png) no-repeat;
 	width: 16px;
 	height: 16px;
 	display: inline-block;
 }
 
 .vibe-down {
-	background: url(http://c95725.r25.cf3.rackcdn.com/000000-16-2-74.png) no-repeat;
+	background: url(http://c95725.r25.cf3.rackcdn.com/c1403e-16-2-74.png) no-repeat;
 }
 
 .sharevibe {
 	position: absolute;
 	right: 5px;
+	top: 6px;
 	display: inline-block;
 }
