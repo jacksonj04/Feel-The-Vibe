@@ -11,13 +11,6 @@
 			// Enabling debug will show you any errors in the calls you're making, e.g:
 			$this->tweet->enable_debug(TRUE);
 			
-			// If you already have a token saved for your user
-			// (In a db for example) - See line #37
-			// 
-			// You can set these tokens before calling logged_in to try using the existing tokens.
-			// $tokens = array('oauth_token' => 'foo', 'oauth_token_secret' => 'bar');
-			// $this->tweet->set_tokens($tokens);
-			
 		}
 		
 		function index()
@@ -47,13 +40,11 @@
 		{
 			$tokens = $this->tweet->get_tokens();
 			
-			// $user = $this->tweet->call('get', 'account/verify_credentiaaaaaaaaals');
-			// 
-			// Will throw an error with a stacktrace.
-			
 			print_r($tokens);
 			
 			$user = $this->tweet->call('get', 'account/verify_credentials');
+			
+			print_r($user);
 			
 		}
 	}
