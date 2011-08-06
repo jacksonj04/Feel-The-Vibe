@@ -10,6 +10,16 @@
 	
 	</pre>
 	
+	<?php
+	
+	// Loop through all our incoming tags
+	
+	foreach ($paragraphs[1] as $paragraph_id => $paragraph_tag){
+		echo '<' . $paragraph_tag . ' id="para_' . $paragraph_id . '">' . $paragraphs[2][$paragraph_id] . '</' . $paragraph_tag . '>';
+	}
+	
+	?>
+	
 </div> 
 
 <aside class="grid_4 last"> 
