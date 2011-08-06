@@ -77,7 +77,7 @@ class Parser extends CI_Model
 	
 	private function _removeDiv($html)
 	{
-		$regex = '/(<div>)(.*)(</div>)/s';
+		$regex = '/(<div>)(.*)(<\/div>)/s';
 		$html = preg_replace($regex, '${2}', $html);
 		return trim($html);
 	}
