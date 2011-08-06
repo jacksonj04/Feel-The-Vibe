@@ -4,18 +4,21 @@
 
 <div class="grid_8" id="viewer"> 
 	
-	<pre>
-	
-	<?php print_r($paragraphs); ?>
-	
-	</pre>
-	
 	<?php
 	
 	// Loop through all our incoming tags
 	
 	foreach ($paragraphs[1] as $paragraph_id => $paragraph_tag){
-		echo '<' . $paragraph_tag . ' id="para_' . $paragraph_id . '">' . $paragraphs[2][$paragraph_id] . '</' . $paragraph_tag . '>';
+	
+		// Get any vibes for the paragraph
+		$paragraph_vibes = $this->db->where('post_id',$post_id)->where('paragraph', $paragraph_id)->get('vibes');
+		
+		foreach ($paragraph_vibes->row() as $vibe){
+			echo '<p>VIBE FOR P' . $vibe->paragraph . ' is ' . $vibe->vibe . '</p>';
+		}
+	
+		// Output the tag with all relevant classes and stuff
+		echo '<' . $paragraph_tag . ' id="para_' . $paragraph_id . '" class="' . implode(' ', $paragraph_classes) '">' . $paragraphs[2][$paragraph_id] . '</' . $paragraph_tag . '>';
 	}
 	
 	?>
