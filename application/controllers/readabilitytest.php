@@ -13,9 +13,33 @@ class Readabilitytest extends CI_Controller {
 		$url = 'http://www.bbc.co.uk/news/world-us-canada-14428930';
 		$html = file_get_contents($url);
 		
-		$raw = $this->readability->get($html);
+		$readability->debug = TRUE;
+		$this->readability->get($html, $url);
 		
-		echo $raw;
+		$result = $this->readability->init();
+		
+		if ($result)
+		{
+			echo "== Title =====================================\n";
+			echo $readability->getTitle()->textContent, "\n\n";
+			echo "== Body ======================================\n";
+			$content = $this->readability->getContent()->innerHTML;
+			// if we've got Tidy, let's clean it up for output
+			
+			if (function_exists('tidy_parse_string'))
+			{
+				$tidy = tidy_parse_string($content, array('indent'=>true, 'show-body-only' => true), 'UTF8');
+				$tidy->cleanRepair();
+				$content = $tidy->value;
+			}
+			
+			echo $content;
+		
+			}
+		else
+		{
+			echo 'Looks like we couldn\'t find the content. :(';
+		}
 		
 	}
 
