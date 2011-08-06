@@ -1,5 +1,5 @@
 <div class="grid_12">
-	<h1><?php echo $title . ' ID: ' . $post_id; ?></h1>
+	<h1><?php echo $title; ?></h1>
 </div>
 
 <div class="grid_8" id="viewer"> 
