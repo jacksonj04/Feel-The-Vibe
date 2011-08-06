@@ -48,6 +48,9 @@ class Parser extends CI_Model
 				// Remove unwanted html and comments
 				$this->content = $this->_removeTags($this->content);
 				
+				// LIs to Ps
+				$this->content = $this->_li2p($this->content);
+				
 				// Tidy!
 				if (function_exists('tidy_parse_string'))
 				{
@@ -70,6 +73,12 @@ class Parser extends CI_Model
 			$this->error_message = $e->getMessage();
 			return FALSE;
 		}
+	}
+	
+	private function _li2p($html)
+	{
+		$html = str_ireplace(array('<li>', '</li>'), array('<p>&bull; ', '</p>'), $html);
+		return $html
 	}
 	
 	private function _removeTags($html)
