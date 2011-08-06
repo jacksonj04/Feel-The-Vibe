@@ -55,19 +55,19 @@
 			<tbody>
 				<tr>
 					<th scope="row">Original Page</th>
-					<td><?php echo $cap_url ?></td>
+					<td><a href="<?php echo $cap_url; ?>"><?php $this->load->helper('text'); echo character_limiter($cap_url,20); ?></a></td>
 				</tr>
 				<tr>
 					<th scope="row">Captured On</th>
-					<td><?php echo $cap_time ?></td>
+					<td><?php echo date('D j M, g.ia', $cap_time); ?></td>
 				</tr>
 				<tr>
 					<th scope="row">Captured By</th>
-					<td><?php echo $cap_user ?></td>
+					<td><?php echo $cap_user; ?></td>
 				</tr>
 				<tr>
 					<th scope="row">Short Link</th>
-					<td><?php echo $shorturl ?></td>
+					<td><a href="<?php echo $shorturl; ?>"><?php echo $shorturl; ?></a></td>
 				</tr>
 			</tbody>
 		</table>
