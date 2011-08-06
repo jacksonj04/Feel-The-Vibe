@@ -33,6 +33,11 @@ class View extends CI_Controller {
 		}
 	}
 	
+	function hello()
+	{
+		echo 'hello';
+	}
+	
 	function create()
 	{
 		$data = array(
