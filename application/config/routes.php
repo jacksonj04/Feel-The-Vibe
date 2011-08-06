@@ -44,7 +44,7 @@ $route['404_override'] = '';
 $route['signin'] = 'signin/index';
 $route['signin/auth'] = 'signin/auth';
 
-$route['do/(:any)'] = "do/$1";
+$route['ajax/(:any)'] = "ajax/$1";
 
 $route['create'] = 'post_view/create';
 
