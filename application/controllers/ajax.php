@@ -5,6 +5,8 @@ class Ajax extends CI_Controller {
 	function __construct()
 	{
 	
+		parent::__construct();
+		
 		if ( !$this->tweet->logged_in() )
 		{
 			// User isn't logged in! THROW A WOBBLER!
