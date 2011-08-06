@@ -30,7 +30,9 @@
 		<script src="http://c94471.r71.cf3.rackcdn.com/DOMAssistantCompressed-2.8.js"></script>
 		<script src="http://c94471.r71.cf3.rackcdn.com/selectivizr-1.0.1.js"></script>
 		<script src="http://c94471.r71.cf3.rackcdn.com/respond.min.js"></script>
-	<![endif]--> 
+	<![endif]-->
+	
+	<script src="/js/main.js" type="text/javascript"></script> 
 		
 </body> 
 </html>
