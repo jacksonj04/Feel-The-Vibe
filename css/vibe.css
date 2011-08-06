@@ -2,10 +2,6 @@
 	padding: 5px 10px;
 }
 
-#viewer p:hover {
-	background: #EEE;
-}
-
 #viewer p.vibe3 {
 	background: #A3FFA3;
 }
@@ -27,4 +23,8 @@
 }
 #viewer p.vibe-1 {
 	background: #FFE6E6;
+}
+
+#viewer p:hover {
+	background: #EEE;
 }
