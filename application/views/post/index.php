@@ -39,7 +39,9 @@
 		$paragraph_classes[] = 'vibe' . (string) $paragraph_vibe;
 	
 		// Output the tag with all relevant classes and stuff
-		echo '<' . $paragraph_tag . ' id="para_' . $paragraph_id . '" class="' . implode(' ', $paragraph_classes) . '">' . $paragraphs[2][$paragraph_id] . '</' . $paragraph_tag . '>';
+		echo '<' . $paragraph_tag . ' id="para_' . $paragraph_id . '" class="' . implode(' ', $paragraph_classes) . '">' . $paragraphs[2][$paragraph_id] . '<div class="sharevibe">
+			<a href="#" class="vibe-up"></a><a href="#" class="vibe-down"></a>
+		</div></' . $paragraph_tag . '>';
 	}
 	
 	?>
