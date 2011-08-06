@@ -77,7 +77,7 @@ class Post extends CI_Model
 				return FALSE;
 			}
 			
-			$result = $this->db->get_where('posts', array('series' => $series, 'page' => $page));
+			$result = $this->db->get_where('posts', array('series_id' => $series, 'page' => $page));
 			
 			if ($result->num_rows() == 1)
 			{
