@@ -21,7 +21,7 @@ class Readabilitytest extends CI_Controller {
 		if ($result)
 		{
 			echo "== Title =====================================\n";
-			echo $readability->getTitle()->textContent, "\n\n";
+			echo $this->readability->getTitle()->textContent, "\n\n";
 			echo "== Body ======================================\n";
 			$content = $this->readability->getContent()->innerHTML;
 			// if we've got Tidy, let's clean it up for output
