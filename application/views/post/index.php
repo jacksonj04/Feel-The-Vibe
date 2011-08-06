@@ -18,7 +18,7 @@
 		}
 	
 		// Output the tag with all relevant classes and stuff
-		echo '<' . $paragraph_tag . ' id="para_' . $paragraph_id . '" class="' . implode(' ', $paragraph_classes) '">' . $paragraphs[2][$paragraph_id] . '</' . $paragraph_tag . '>';
+		echo '<' . $paragraph_tag . ' id="para_' . $paragraph_id . '" class="' . implode(' ', $paragraph_classes) . '">' . $paragraphs[2][$paragraph_id] . '</' . $paragraph_tag . '>';
 	}
 	
 	?>
