@@ -48,6 +48,24 @@
 </div> 
 
 <aside class="grid_4 last"> 
+
+	<div class="box bg_light">
+		<p>
+			Captured by<br>
+			Captured on<br>
+			Captured from
+		</p>		
+	</div>
+	
+	<div class="box bg_light">
+		<p>
+			I'm a floaty comment box!
+		</p>
+		
+		<p>
+			Toggle vibe heat map
+		</p>
+	</div>
 	
 	<?php
 	
