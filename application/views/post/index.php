@@ -28,15 +28,15 @@
 		}
 		
 		// Cap values
-		if ($paragraph_vibes > 3){
-			$paragraph_vibes = 3;
+		if ($paragraph_vibe > 3){
+			$paragraph_vibe = 3;
 		}
 		
-		if ($paragraph_vibes < -3){
-			$paragraph_vibes = -3;
+		if ($paragraph_vibe < -3){
+			$paragraph_vibe = -3;
 		}
 		
-		$paragraph_classes[] = 'vibe' . (string) $paragraph_vibes;
+		$paragraph_classes[] = 'vibe' . (string) $paragraph_vibe;
 	
 		// Output the tag with all relevant classes and stuff
 		echo '<' . $paragraph_tag . ' id="para_' . $paragraph_id . '" class="' . implode(' ', $paragraph_classes) . '">' . $paragraphs[2][$paragraph_id] . '</' . $paragraph_tag . '>';
