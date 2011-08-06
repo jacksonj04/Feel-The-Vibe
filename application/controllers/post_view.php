@@ -45,7 +45,9 @@ class Post_view extends CI_Controller {
 		if ($this->input->post('create'))
 		{			
 			$url = $this->input->post('url');
-					
+			
+			$this->load->model('parser');
+			
 			if ($this->parser->url($url))
 			{
 				if ($p = $this->post->add($url, $this->parser->title, $this->parser->content))
