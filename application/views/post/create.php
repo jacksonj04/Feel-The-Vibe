@@ -18,6 +18,8 @@
 	
 		<?php echo form_open('', array('class'=>'box bg_light')); ?>
 		
+			<p>Tell us the address of the page you want to make commentable, then relax whilst we do some magic. Your page will be with you in a few seconds.</p>
+		
 			<p class="inputwrapper">
 				<label for="url">URL</label><br>
 				<input type="url" id="url" name="url" placeholder="Enter a URL here…" class="text">

@@ -13,7 +13,7 @@
 	<link rel="dns-prefetch" href="//c95725.r25.cf3.rackcdn.com"> 
 	<link rel="dns-prefetch" href="//c95725.ssl.cf3.rackcdn.com"> 
  
-	<title><?php if (isset($title)) echo $title . ' - '; ?>Feel The Vibe</title> 
+	<title>Feel The Vibe<?php if (isset($title)) echo ' - ' . $title; ?></title> 
 	<meta name="description" content="Make any web page a document you can comment on paragraph by paragraph."> 
 	<meta name="author" content="Team Feel The Vibe"> 
 	
