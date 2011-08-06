@@ -46,5 +46,9 @@
 	position: absolute;
 	right: 5px;
 	top: 6px;
+	display: none;
+}
+
+.para:hover .sharevibe {
 	display: inline-block;
 }
