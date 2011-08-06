@@ -65,7 +65,7 @@ class View extends CI_Controller {
 		}
 		
 		$this->load->view('inc/head');
-		$this->load->view('post/create');
+		$this->load->view('post/create', $data);
 		$this->load->view('inc/foot');
 	}
 
