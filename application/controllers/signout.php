@@ -13,6 +13,8 @@ class Signout extends CI_Controller {
 			
 		// Sign the user out.
 		$this->tweet->logout();
+		
+		redirect();
 
 	}
 
