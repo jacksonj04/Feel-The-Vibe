@@ -38,6 +38,13 @@ class Ajax extends CI_Controller {
 				// Test for existing vibes
 				if ($vibes_db->num_rows() == 1){
 					// Vibe exists. Update.
+					$vibe = array(
+						'vibe'		=>	'up',
+						'timestamp'	=>	time()
+					);
+					
+					$this->db->where('post_id', $this->input->post('post'))->where('paragraph', $this->input->post('paragraph'))->where('user_id', $user->user_id)->$update('vibes', $vibe);
+					
 				}else{
 					// No vibe. Put one in.
 					$vibe = array(
@@ -50,6 +57,9 @@ class Ajax extends CI_Controller {
 					
 					$this->db->insert('vibes', $vibe);
 				}
+				
+				echo json_encode(array('message' => 'Vibe up logged!'));
+				
 			}else{
 				// Post doesn't exist, something has gone wrong.
 				echo json_encode(array('error' => 'Post does not exist.'));
