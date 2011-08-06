@@ -22,7 +22,8 @@
 	<link rel="shortcut icon" href="http://c94471.r71.cf3.rackcdn.com/favicon.ico"> 
 	<link rel="apple-touch-icon" href="http://c94471.r71.cf3.rackcdn.com/icon.png"> 
  
-	<link rel="stylesheet" href="http://c94471.r71.cf3.rackcdn.com/cwd.css"> 
+	<link rel="stylesheet" href="http://c94471.r71.cf3.rackcdn.com/cwd.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/vibe.css"> 
 	<script src="http://c94471.r71.cf3.rackcdn.com/modernizr.js"></script> 
 	
 </head> 
