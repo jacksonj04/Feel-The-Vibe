@@ -40,11 +40,27 @@
 		{
 			$tokens = $this->tweet->get_tokens();
 			
-			echo '<pre>' . print_r($tokens, true) . '</pre>';
-			
 			$user = $this->tweet->call('get', 'account/verify_credentials');
 			
-			echo '<pre>' . print_r($user, true) . '</pre>';
+			// Try find an existing user from this token.
+			$user_db = $this->db->where('oauth_token', $tokens['oauth_token'])->get('users');
+		
+			if ($user_db->num_rows() == 0 ) {
+			
+				// This is a new user. Insertify!
+				
+				$user_new = array(
+					'twitter'				=>	$user->screen_name,
+					'name'					=>	$user->name,
+					'oauth_token'			=>	$tokens->oauth_token,
+					'oauth_token_secret'	=>	$tokens->oauth_token_secret
+				);
+			
+				$this->db->insert('users', $user_new);
+				
+				echo '<p>New User Created!</p>';
+			
+			}
 			
 		}
 	}
