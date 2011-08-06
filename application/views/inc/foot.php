@@ -31,7 +31,11 @@
 		<script src="http://c94471.r71.cf3.rackcdn.com/selectivizr-1.0.1.js"></script>
 		<script src="http://c94471.r71.cf3.rackcdn.com/respond.min.js"></script>
 	<![endif]--> 
-	<script src="http://c94471.r71.cf3.rackcdn.com/cwd.js" type="text/javascript"></script> 
+	<script src="http://c94471.r71.cf3.rackcdn.com/cwd.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+	
+	</script>
 		
 </body> 
 </html>

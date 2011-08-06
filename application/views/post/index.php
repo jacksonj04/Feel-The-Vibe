@@ -3,8 +3,12 @@
 </div>
 
 <div class="grid_8" id="viewer"> 
-		
-	<?php echo $content; ?>
+	
+	<pre>
+	
+	<?php print_r($paragraphs); ?>
+	
+	</pre>
 	
 </div> 
 
