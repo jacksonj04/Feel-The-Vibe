@@ -78,7 +78,7 @@ class Parser extends CI_Model
 	private function _li2p($html)
 	{
 		$html = str_ireplace(array('<li>', '</li>'), array('<p>&bull; ', '</p>'), $html);
-		return $html
+		return $html;
 	}
 	
 	private function _removeTags($html)
