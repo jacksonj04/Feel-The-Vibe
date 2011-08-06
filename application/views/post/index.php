@@ -16,9 +16,27 @@
 		// Reset classes
 		$paragraph_classes = array();
 		
+		// Reset vibe
+		$paragraph_vibe = 0;
+		
 		foreach ($paragraph_vibes->result() as $vibe){
-			echo '<p>VIBE FOR P' . $vibe->paragraph . ' is ' . $vibe->vibe . '</p>';
+			if ($vibe->vibe == 'up'){
+				$paragraph_vibe++;
+			}elseif ($vibe->vibe == 'down'){
+				$paragraph_vibe--;
+			}
 		}
+		
+		// Cap values
+		if ($paragraph_vibes > 3){
+			$paragraph_vibes = 3;
+		}
+		
+		if ($paragraph_vibes < -3){
+			$paragraph_vibes = -3;
+		}
+		
+		$paragraph_classes[] = 'vibe' . (string) $paragraph_vibes;
 	
 		// Output the tag with all relevant classes and stuff
 		echo '<' . $paragraph_tag . ' id="para_' . $paragraph_id . '" class="' . implode(' ', $paragraph_classes) . '">' . $paragraphs[2][$paragraph_id] . '</' . $paragraph_tag . '>';
