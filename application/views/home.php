@@ -93,7 +93,9 @@
 				
 					echo '<h3>Hello Again!</h3>
 					
-					<p>You\'re already signed in. Badass.</p>';
+					<p>You\'re already signed in. That\'s cool.</p>
+					
+					<p>If you really want to you can <a href="' . site_url('signout') . '">sign out</a>.</p>';
 					
 				}
 			
