@@ -48,6 +48,9 @@ class Parser extends CI_Model
 				// Remove comments
 				$this->content = $this->_removeComments($this->content);
 				
+				// Remove parent div
+				$this->content = $this->_removeDiv($this->content);
+				
 				// Tidy!
 				if (function_exists('tidy_parse_string'))
 				{
@@ -70,6 +73,13 @@ class Parser extends CI_Model
 			$this->error_message = $e->getMessage();
 			return FALSE;
 		}
+	}
+	
+	private function _removeDiv($html)
+	{
+		$regex = '/(<div>)(.*)(</div>)/s';
+		$html = preg_replace($regex, '${2}', $html);
+		return trim($html);
 	}
 	
 	private function _removeAttr($html)
