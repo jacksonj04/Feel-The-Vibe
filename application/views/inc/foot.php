@@ -38,7 +38,7 @@
 		
 			$('.comment').each(function(){
 			
-				alert ('ZOMG COMMENT: ' + $(this).attr('data-paragraph'));
+				$(this).css('position','absolute').css('top', $('#para_' + $(this).attr('data-paragraph')).position().top);
 			
 			});
 		
