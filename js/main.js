@@ -6,7 +6,7 @@ function showHeatMap(e)
 	
 		var vibe = $(this).data('vibe');
 		
-		$(this).addClass('vibe'+vibe);
+		$(this).addClass(vibe);
 	
 	});
 }
