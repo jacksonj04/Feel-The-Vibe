@@ -81,7 +81,7 @@
 		</p>
 		
 		<p>
-			<a href="#" class="toggleHeatMap">Toggle vibe heat map
+			<a href="#" id="toggleHeatMap">Toggle vibe heat map
 		</p>
 	</div>
 	
