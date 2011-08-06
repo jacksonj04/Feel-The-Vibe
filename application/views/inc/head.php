@@ -29,7 +29,7 @@
  
 <body> 
  
-	<header id="cwd_header" role="banner" style="background:#A174B3;"> 
+	<header id="cwd_header" role="banner" style="background:#3D008B url(<?php echo base_url(); ?>img/head.png) no-repeat center;"> 
 	
 		<section class="cwd_container"> 
 	
