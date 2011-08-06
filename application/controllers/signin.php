@@ -62,7 +62,7 @@
 					'name'					=>	$user->name
 				);
 			
-				$this->db->where->('oauth_token', $tokens['oauth_token'])->update('users', $user_update);
+				$this->db->where('oauth_token', $tokens['oauth_token'])->update('users', $user_update);
 			
 			}
 			
