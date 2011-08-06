@@ -16,6 +16,15 @@ class Ajax extends CI_Controller {
 		}
 	}
 
+	public function test(){
+	
+		echo '<form action="' . site_url('ajax/vibeup') . '" method="post">
+			<p><input type="text" name="post"></p>
+			<p><input type="text" name="paragraph"></p>
+			<p><input type="submit" value="test"></p>
+		</form>';
+	}
+
 	public function vibeup()
 	{
 	
