@@ -30,11 +30,11 @@
  
 <body> 
  
-	<header id="cwd_header" role="banner"> 
+	<header id="cwd_header" role="banner" style="background:red;"> 
 	
 		<section class="cwd_container"> 
 	
-			<hgroup class="grid_12" id="cwd_hgroup"> 
+			<hgroup class="grid_12" id="cwd_hgroup" style="background:none;"> 
 						
 				<a href="/"> 
 					<h1>Feel The Vibe</h1> 
