@@ -3,16 +3,21 @@
  
 	<footer class="cwd_container" id="cwd_footer" role="contentinfo"> 
 	
+		<!--
+		If you require additional footer links uncomment this block and remove the 'push_6' class from the <section> below
 		<section class="grid_6">
 			<ul>
-				<li>Created for <a href="http://leedshack.com/">Leeds Hack</a></li>
+				<li><a href="#">A link</a></li>
+				<li><a href="#">A link</a></li>
 			</ul>		
 		</section>
+		 --> 
 		
-		<section class="grid_6 last"> 
+		<section class="push_6 grid_6 last"> 
 			<p class="align-right"> 
 				<small> 
-					&copy; Team Feel The Vibe
+					&copy; Team Feel The Vibe<br>
+					Created for <a href="http://leedshack.com/">Leeds Hack</a>
 				</small> 
 			</p> 
 		</section> 
