@@ -90,7 +90,7 @@ class Parser extends CI_Model
 	
 	private function _removeComments($html)
 	{
-		$regex = '/<!--(.*)-->/sm';
+		$regex = '/<!--(.*)-->/m';
 		$html = preg_replace($regex, '', $html);
 		return $html;
 	}
