@@ -44,7 +44,7 @@
 			
 			$user = $this->tweet->call('get', 'account/verify_credentials');
 			
-			print_r($user);
+			echo '<p>' . $user->protected['screen_name'] . '</p>';
 			
 		}
 	}
