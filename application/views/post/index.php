@@ -50,11 +50,28 @@
 <aside class="grid_4 last"> 
 
 	<div class="box bg_light">
-		<p>
-			Captured by<br>
-			Captured on<br>
-			Captured from
-		</p>		
+		
+		<table>
+			<tbody>
+				<tr>
+					<th scope="row">Original Page</th>
+					<td><?php echo $cap_url ?></td>
+				</tr>
+				<tr>
+					<th scope="row">Captured On</th>
+					<td><?php echo $cap_time ?></td>
+				</tr>
+				<tr>
+					<th scope="row">Captured By</th>
+					<td><?php echo $cap_user ?></td>
+				</tr>
+				<tr>
+					<th scope="row">Short Link</th>
+					<td><?php echo $shorturl ?></td>
+				</tr>
+			</tbody>
+		</table>
+			
 	</div>
 	
 	<div class="box bg_light">

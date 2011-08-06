@@ -86,7 +86,11 @@ class Post extends CI_Model
 				return array(
 					'title' => $post->title,
 					'content' => $post->content,
-					'post_id' => $post->post_id
+					'post_id' => $post->post_id,
+					'cap_url' => $post->original_url,
+					'cap_time'	=>	$post->generated,
+					'cap_user'	=>	$post->user_id,
+					'shorturl'	=>	$post->shorturl
 				);
 			}
 			
