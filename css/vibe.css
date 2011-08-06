@@ -34,6 +34,7 @@
 	background: url(http://c95725.r25.cf3.rackcdn.com/000000-16-2-73.png) no-repeat;
 	width: 16px;
 	height: 16px;
+	display: inline-block;
 }
 
 .vibe-down {
