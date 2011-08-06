@@ -44,7 +44,10 @@ class View extends CI_Controller {
 	
 		if ($this->input->post('create'))
 		{
-			$this->load->model('post');
+			//$this->load->model('post');
+			
+			die(var_dump($this->input->post()));
+			
 			$url = $this->input->post('url');
 			
 			die(var_dump($url));
