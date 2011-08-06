@@ -23,7 +23,7 @@ class View extends CI_Controller {
 			
 			if ($post)
 			{
-				$this->load->view('post/view', $post);
+				$this->load->view('post/index', $post);
 			}
 			
 			else
@@ -37,7 +37,7 @@ class View extends CI_Controller {
 	{
 		$data = array(
 			'success' => FALSE,
-			'error' => NULL
+			'error' => FALSE
 		);
 	
 		if ($this->input->post('create'))
@@ -64,7 +64,9 @@ class View extends CI_Controller {
 			}
 		}
 		
+		$this->load->view('inc/head');
 		$this->load->view('post/create');
+		$this->load->view('inc/foot');
 	}
 
 } // EOF
