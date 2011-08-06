@@ -22,9 +22,20 @@
 	background: #FFC8C8;
 }
 #viewer p.vibe-1 {
+<<<<<<< HEAD
 	background: #FFE6E6;
 }
 
 #viewer p:hover {
-	background: #EEE;
+	background: #f6e1df;
+}
+
+.vibe-up, .vibe-down {
+	background: url(http://c95725.r25.cf3.rackcdn.com/000000-16-2-73.png) no-repeat;
+	width: 16px;
+	height: 16px;
+}
+
+.vibe-down {
+	background: url(http://c95725.r25.cf3.rackcdn.com/000000-16-2-74.png) no-repeat;
 }
