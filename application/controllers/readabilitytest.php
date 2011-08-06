@@ -17,7 +17,8 @@ class Readabilitytest extends CI_Controller {
 		
 		if ($this->parser->url($url))
 		{
-			echo $this->post->add($this->parser->title, $this->parser->content);
+			echo 'woop';
+			//echo $this->post->add($this->parser->title, $this->parser->content);
 		}
 		
 		else
