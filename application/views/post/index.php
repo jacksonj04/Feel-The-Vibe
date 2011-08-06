@@ -73,7 +73,7 @@
 		
 			echo '<div class="box bg_light"> 
 		
-			<p>' . $comment->text . '</p>
+			<p id="comment' . $comment->comment_id . '" data-paragraph="' . $comment->paragraph_id . '">' . $comment->text . '</p>
 			
 			</div>';
 		
