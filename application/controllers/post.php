@@ -1,5 +1,5 @@
 <?php
-class View extends CI_Controller {
+class Post extends CI_Controller {
 	
 	function __construct()
 	{
