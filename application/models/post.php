@@ -39,14 +39,14 @@ class Post extends CI_Model
 			}
 			
 			$add = array(
-				'orginal_url' => $url,
-				'title'		=> $title,
-				'content'	=> $content,
-				'generated'	=> time(),
-				'shorturl'	=> $short_url,
-				'user_id'	=> $user_id,
-				'series_id'	=> $series,
-				'page'		=> $page
+				'original_url'	=> $url,
+				'title'			=> $title,
+				'content'		=> $content,
+				'generated'		=> time(),
+				'shorturl'		=> $short_url,
+				'user_id'		=> $user_id,
+				'series_id'		=> $series,
+				'page'			=> $page
 			);
 			
 			if ($this->db->insert('posts', $add))
