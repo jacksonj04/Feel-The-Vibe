@@ -66,7 +66,7 @@ class Parser extends CI_Model
 		}
 	}
 	
-	private function reset()
+	private function _reset()
 	{
 		$this->error = FALSE;
 		$this->error_message = NULL;
