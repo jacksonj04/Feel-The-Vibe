@@ -24,7 +24,12 @@ class Post extends CI_Model
 					
 			if ($series == NULL)
 			{
-				$series = substr(md5(uniqid()), 0, 10);
+				$this->series = substr(md5(uniqid()), 0, 10);
+			}
+			
+			else
+			{
+				$this->series = $series;
 			}
 			
 			if ($page !== 1)
