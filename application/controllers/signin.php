@@ -18,7 +18,10 @@
 			// $tokens = array('oauth_token' => 'foo', 'oauth_token_secret' => 'bar');
 			// $this->tweet->set_tokens($tokens);
 			
-			
+		}
+		
+		function index()
+		{
 			if ( !$this->tweet->logged_in() )
 			{
 				// This is where the url will go to after auth.
@@ -34,20 +37,9 @@
 			
 				// We already have a signed in user. Bundle them back off to the home page.
 			
-				// You can get the tokens for the active logged in user:
-				// $tokens = $this->tweet->get_tokens();
+				redirect();
 				
-				// 
-				// These can be saved in a db alongside a user record
-				// if you already have your own auth system.
-				
-				redirect('home');
 			}
-		}
-		
-		function index()
-		{
-			echo 'Hang tight, doing some magic.';
 		}
 		
 		// User is coming back from authentication. Add/update database accordingly.
