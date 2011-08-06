@@ -37,9 +37,10 @@ class View extends CI_Controller {
 	{
 		$data = array(
 			'success' => FALSE,
-			'error' => FALSE,
-			'currentpage' => 'home'
+			'error' => FALSE
 		);
+		
+		$head = array('currentpage' => 'create');
 	
 		if ($this->input->post('create'))
 		{
@@ -65,7 +66,7 @@ class View extends CI_Controller {
 			}
 		}
 		
-		$this->load->view('inc/head');
+		$this->load->view('inc/head', $head);
 		$this->load->view('post/create', $data);
 		$this->load->view('inc/foot');
 	}
