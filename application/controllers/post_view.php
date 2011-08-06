@@ -25,6 +25,10 @@ class Post_view extends CI_Controller {
 			{
 				$head['title'] = $post['title'];
 				$head['currentpage'] = null;
+				
+				$content = preg_match_all('/<(p|li|h1|h2|h3|h4|h5|h6)>(.*?)</(\1)>/gis', $post['content'], $matches);
+				$post['content'] = implode('', $matches);			
+				
 				$this->load->view('inc/head', $head);
 				$this->load->view('post/index', $post);
 				$this->load->view('inc/foot');
