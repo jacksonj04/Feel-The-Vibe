@@ -48,20 +48,36 @@
 
 <aside class="grid_4 last"> 
 	
-	<div class="box bg_contrast"> 
+	<?php
 	
-		<h3>Comments Plz!</h3>
+	if ($comments->num_rows() == 0){
+	
+		// No comments. Throw up a comment promo box.
+	
+		echo '<div class="box bg_contrast"> 
 		
-		<?php
+			<h3>Comments Plz!</h3>';
+			
+			if ($this->tweet->logged_in()){
+				echo '<p>We don\'t yet have any comments on this page. To leave yours just click on the paragraph which sparked your thoughts.</p>';
+			}else{
+				echo '<p>We don\'t yet have any comments on this page. To leave yours you\'ll first need to <a href="' . site_url('signin') . '">sign in</a>.</p>';
+			}
 		
-		if ($this->tweet->logged_in()){
-			echo '<p>We don\'t yet have any comments on this page. To leave yours just click on the paragraph which sparked your thoughts.</p>';
-		}else{
-			echo '<p>We don\'t yet have any comments on this page. To leave yours you\'ll first need to <a href="' . site_url('signin') . '">sign in</a>.</p>';
+		echo '</div>';
+		
+	}else{
+	
+		foreach ($comments->result() as $comment){
+		
+			echo '<div class="box bg_light"> 
+		
+			<p>' . $comment->text . '</p>
+			
+			</div>';
+		
 		}
 		
-		?>
-	
-	</div>
+	}
 			
 </aside>
