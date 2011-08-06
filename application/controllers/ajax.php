@@ -28,15 +28,19 @@ class Ajax extends CI_Controller {
 	public function vibeup()
 	{
 	
-		if ($this->input->post('post') && $this->input->post('paragraph')){
+		if ($this->input->post('post') && $this->input->post('paragraph') && $this->input->is_ajax_request())
+		{
 			// We have post and paragraph. Validation time!
 			$post_db = $this->db->where('post_id', $this->input->post('post'))->get('posts');
-			if ($post_db->num_rows() == 1){
+			
+			if ($post_db->num_rows() == 1)
+			{
 				// Post exists, be happy
 				$user = $this->user->getcurrent();
 				$vibes_db = $this->db->where('post_id', $this->input->post('post'))->where('paragraph', $this->input->post('paragraph'))->where('user_id', $user->user_id)->get('vibes');
 				// Test for existing vibes
-				if ($vibes_db->num_rows() == 1){
+				if ($vibes_db->num_rows() == 1)
+				{
 					// Vibe exists. Update.
 					$vibe = array(
 						'vibe'		=>	'up',
@@ -45,7 +49,10 @@ class Ajax extends CI_Controller {
 					
 					$this->db->where('post_id', $this->input->post('post'))->where('paragraph', $this->input->post('paragraph'))->where('user_id', $user->user_id)->update('vibes', $vibe);
 					
-				}else{
+				}
+				
+				else
+				{
 					// No vibe. Put one in.
 					$vibe = array(
 						'user_id'	=>	$this->user->getcurrent()->user_id,
@@ -60,11 +67,16 @@ class Ajax extends CI_Controller {
 				
 				echo json_encode(array('message' => 'Vibe up logged!'));
 				
-			}else{
+			}
+			
+			else
+			{
 				// Post doesn't exist, something has gone wrong.
 				echo json_encode(array('error' => 'Post does not exist.'));
 			}
-		}else{
+		}
+		else
+		{
 			echo json_encode(array('error'=>'Unable to complete vibe up.'));
 		}
 		
