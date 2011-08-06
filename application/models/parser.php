@@ -4,7 +4,7 @@ class Parser extends CI_Model
 
 	public $error_message = NULL;
 	public $title = NULL;
-	public $body = NULL;
+	public $content = NULL;
 
 	public function __construct()
 	{
@@ -40,20 +40,20 @@ class Parser extends CI_Model
 			if ($result)
 			{
 				$this->title = $this->readability->getTitle()->textContent;
-				$this->body = $this->readability->getContent()->innerHTML;
+				$this->content = $this->readability->getContent()->innerHTML;
 				
 				// Remove attributes
-				$this->body = $this->_removeAttr($this->body);
+				$this->content = $this->_removeAttr($this->content);
 				
 				// Remove comments
-				$this->body = $this->_removeComments($this->body);
+				$this->content = $this->_removeComments($this->content);
 				
 				// Tidy!
 				if (function_exists('tidy_parse_string'))
 				{
 					$tidy = tidy_parse_string($this->body, array('indent'=>true, 'show-body-only' => true), 'UTF8');
 					$tidy->cleanRepair();
-					$this->body = $tidy->value;
+					$this->content = $tidy->value;
 				}
 				
 				return TRUE;
