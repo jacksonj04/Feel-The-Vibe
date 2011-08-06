@@ -51,9 +51,7 @@ class View extends CI_Controller {
 		$head = array('currentpage' => 'create');
 	
 		if ($this->input->post('create'))
-		{
-			$this->load->model('post');
-			
+		{			
 			
 			
 			$url = $this->input->post('url');
