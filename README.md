@@ -9,9 +9,9 @@ The Team
 --------
 
 * Nick Jackson
-  nick@nickjackson.me
-  @jacksonj04
+** nick@nickjackson.me
+** @jacksonj04
   
 * Alex Bibie
-  alex@alexbilbie.com
-  @alexbilbie
+** alex@alexbilbie.com
+** @alexbilbie
