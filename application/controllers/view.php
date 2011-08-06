@@ -46,13 +46,13 @@ class View extends CI_Controller {
 		
 		var_dump($this->input->post('create'));
 		
-		die;
+		//die;
 		
 		$head = array('currentpage' => 'create');
 	
 		if ($this->input->post('create'))
 		{
-			//$this->load->model('post');
+			$this->load->model('post');
 			
 			
 			
