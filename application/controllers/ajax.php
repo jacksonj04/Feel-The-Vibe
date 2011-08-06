@@ -41,8 +41,8 @@ class Ajax extends CI_Controller {
 				}else{
 					// No vibe. Put one in.
 					$vibe = array(
-						'user'		=>	$this->user->getcurrent()->user_id,
-						'post'		=>	$this->input->post('post'),
+						'user_id'	=>	$this->user->getcurrent()->user_id,
+						'post_id'	=>	$this->input->post('post'),
 						'paragraph'	=>	$this->input->post('paragraph'),
 						'vibe'		=>	'up',
 						'timestamp'	=>	time()
