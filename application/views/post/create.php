@@ -24,7 +24,7 @@
 			</p>
 			
 			<p>
-				<input type="submit" value="Parse the URL" name="create">
+				<input type="submit" value="Parse the URL" name="create" id="create">
 			</p>
 		
 		<?php echo form_close(); ?>	
