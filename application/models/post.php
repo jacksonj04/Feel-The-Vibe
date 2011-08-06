@@ -67,6 +67,41 @@ class Post extends CI_Model
 		}
 	}
 	
+	function get($series = '', $page = 1)
+	{
+		try
+		{
+			if ($series == '')
+			{
+				throw new Exception ('Missing series');
+				return FALSE;
+			}
+			
+			$result = $this->db->get_where('posts', array('series' => $series, 'page' => $page));
+			
+			if ($result->num_rows() == 1)
+			{
+				$post = $result->row();
+				
+				return array(
+					'title' => $post->title,
+					'content' => $post->content
+				);
+			}
+			
+			else
+			{
+				throw new Exception ('Can\'t find post');
+				return FALSE;
+			}
+		}
+		
+		catch (Exception $e)
+		{
+			$this->error_message = $e->getMessage();
+		}
+	}
+	
 	private function _shorturl()
 	{
 		if ($short = file_get_contents('http://lncn.eu/api?longurl=' . urlencode($this->_permalink())))
