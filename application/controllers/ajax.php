@@ -19,11 +19,28 @@ class Ajax extends CI_Controller {
 	public function vibeup()
 	{
 	
-		if (isset($this->input->post('post')) && isset($this->input->post('paragraph'))){
+		if ($this->input->post('post') && $this->input->post('paragraph')){
 			// We have post and paragraph. Validation time!
 			$post_db = $this->db->where('post_id', $this->input->post('post'))->get('posts');
 			if ($post_db->num_rows() == 1){
 				// Post exists, be happy
+				$user = $this->user->getcurrent();
+				$vibes_db = $this->db->where('post_id', $this->input->post('post'))->where('paragraph', $this->input->post('paragraph'))->where('user_id', $user->user_id)->get('vibes');
+				// Test for existing vibes
+				if ($vibes_db->num_rows() == 1){
+					// Vibe exists. Update.
+				}else{
+					// No vibe. Put one in.
+					$vibe = array(
+						'user'		=>	$this->user->getcurrent()->user_id,
+						'post'		=>	$this->input->post('post'),
+						'paragraph'	=>	$this->input->post('paragraph'),
+						'vibe'		=>	'up',
+						'timestamp'	=>	time()
+					);
+					
+					$this->db->insert('vibes', $vibe);
+				}
 			}else{
 				// Post doesn't exist, something has gone wrong.
 				echo json_encode(array('error' => 'Post does not exist.'));
