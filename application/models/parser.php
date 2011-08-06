@@ -83,7 +83,7 @@ class Parser extends CI_Model
 	
 	private function _removeTags($html)
 	{
-		$html = strip_tags($html, '<p><a><li><h1><h2><h3><h4><h5><h6><abbr><blockquote><code>');
+		$html = strip_tags($html, '<p><a><li><h1><h2><h3><h4><h5><h6><abbr><blockquote><code><b><strong><em><i><u><strike>');
 		return $html;
 	}
 		
