@@ -45,11 +45,8 @@ class Parser extends CI_Model
 				// Remove attributes
 				$this->content = $this->_removeAttr($this->content);
 				
-				// Remove comments
-				$this->content = $this->_removeComments($this->content);
-				
-				// Remove parent div
-				$this->content = $this->_removeDiv($this->content);
+				// Remove unwanted html and comments
+				$this->content = $this->_removeTags($this->content);
 				
 				// Tidy!
 				if (function_exists('tidy_parse_string'))
@@ -75,13 +72,12 @@ class Parser extends CI_Model
 		}
 	}
 	
-	private function _removeDiv($html)
+	private function _removeTags($html)
 	{
-		$regex = '/(<div>)(.*)(<\/div>)/s';
-		$html = preg_replace($regex, '${2}', $html);
-		return trim($html);
+		$html = strip_tags($html, '<p><a><li><h1><h2><h3><h4><h5><h6><abbr><blockquote><code>');
+		return $html;
 	}
-	
+		
 	private function _removeAttr($html)
 	{
 		$regex = '/([^<]*<\s*[a-z](?:[0-9]|[a-z]{0,9}))(?:(?:\s*[a-z\-]{2,14}\s*=\s*(?:"[^"]*"|\'[^\']*\'))*)(\s*\/?>[^<]*)/i'; // match any start tag
@@ -96,13 +92,6 @@ class Parser extends CI_Model
 		}
 		
 		return $strippedString;
-	}
-	
-	private function _removeComments($html)
-	{
-		$regex = '/<!--(.*)-->/m';
-		$html = preg_replace($regex, '', $html);
-		return $html;
 	}
 	
 	private function _reset()
