@@ -1,5 +1,5 @@
 <?php
-class Readability-test extends CI_Controller {
+class Readabilitytest extends CI_Controller {
 	
 	function __construct()
 	{
