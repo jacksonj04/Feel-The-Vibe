@@ -23,7 +23,11 @@ class Post_view extends CI_Controller {
 			
 			if ($post)
 			{
+				$head['title'] = $post['title'];
+				$head['currentpage'] = null;
+				$this->load->view('inc/head', $head);
 				$this->load->view('post/index', $post);
+				$this->load->view('inc/foot');
 			}
 			
 			else
