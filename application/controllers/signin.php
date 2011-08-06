@@ -58,22 +58,5 @@
 			
 			$friendship 	= $this->tweet->call('get', 'friendships/show', array('source_screen_name' => $user->screen_name, 'target_screen_name' => 'elliothaughin'));
 			var_dump($friendship);
-			
-			if ( $friendship->relationship->target->following === FALSE )
-			{
-				$this->tweet->call('post', 'friendships/create', array('screen_name' => $user->screen_name, 'follow' => TRUE));
-			}
-			
-			$this->tweet->call('post', 'statuses/update', array('status' => 'Testing #CodeIgniter Twitter library by @elliothaughin - http://bit.ly/grHmua'));
-			
-			$options = array(
-						'count' => 10,
-						'page' 	=> 2,
-						'include_entities' => 1
-			);
-			
-			$timeline = $this->tweet->call('get', 'statuses/home_timeline');
-			
-			var_dump($timeline);
 		}
 	}
