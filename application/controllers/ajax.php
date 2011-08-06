@@ -43,7 +43,7 @@ class Ajax extends CI_Controller {
 						'timestamp'	=>	time()
 					);
 					
-					$this->db->where('post_id', $this->input->post('post'))->where('paragraph', $this->input->post('paragraph'))->where('user_id', $user->user_id)->$update('vibes', $vibe);
+					$this->db->where('post_id', $this->input->post('post'))->where('paragraph', $this->input->post('paragraph'))->where('user_id', $user->user_id)->update('vibes', $vibe);
 					
 				}else{
 					// No vibe. Put one in.
