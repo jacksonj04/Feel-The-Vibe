@@ -31,20 +31,6 @@
 		<script src="http://c94471.r71.cf3.rackcdn.com/selectivizr-1.0.1.js"></script>
 		<script src="http://c94471.r71.cf3.rackcdn.com/respond.min.js"></script>
 	<![endif]--> 
-	
-	<script type="text/javascript">
-	
-		$(function(){
-		
-			$('.comment').each(function(){
-			
-				$(this).css('position','absolute').css('top', $('#para_' + $(this).attr('data-paragraph')).position().top);
-			
-			});
-		
-		});
-	
-	</script>
 		
 </body> 
 </html>
