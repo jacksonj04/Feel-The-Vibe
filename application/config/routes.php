@@ -44,6 +44,7 @@ $route['404_override'] = '';
 $route['/signin'] = 'signin/index';
 $route['/signin/auth'] = 'signin/auth';
 
+$route['create'] = 'view/create';
 $route['(:any)'] = 'view/index';
 
 /* End of file routes.php */

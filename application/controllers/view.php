@@ -32,5 +32,39 @@ class View extends CI_Controller {
 			}
 		}
 	}
+	
+	function create()
+	{
+		$data = array(
+			'success' => FALSE,
+			'error' => NULL
+		);
+	
+		if ($this->input->post('create'))
+		{
+			$this->load->model('post');
+			$url = $this->input->post('url');
+					
+			if ($this->parser->url($url))
+			{
+				if ($p = $this->post->add($url, $this->parser->title, $this->parser->content))
+				{
+					$data['success'] = $p;
+				}
+				
+				else
+				{
+					$data['error'] = $this->parser->error_message;
+				}
+			}
+			
+			else
+			{
+				$data['error'] = $this->parser->error_message;
+			}
+		}
+		
+		$this->load->view('post/create');
+	}
 
 } // EOF
