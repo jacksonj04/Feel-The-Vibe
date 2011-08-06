@@ -31,12 +31,17 @@
 			}
 			else
 			{
+			
+				// We already have a signed in user. Bundle them back off to the home page.
+			
 				// You can get the tokens for the active logged in user:
 				// $tokens = $this->tweet->get_tokens();
 				
 				// 
 				// These can be saved in a db alongside a user record
 				// if you already have your own auth system.
+				
+				redirect('home');
 			}
 		}
 		
@@ -45,6 +50,7 @@
 			echo 'Hang tight, doing some magic.';
 		}
 		
+		// User is coming back from authentication. Add/update database accordingly.
 		function auth()
 		{
 			$tokens = $this->tweet->get_tokens();
@@ -53,10 +59,9 @@
 			// 
 			// Will throw an error with a stacktrace.
 			
-			$user = $this->tweet->call('get', 'account/verify_credentials');
-			var_dump($user);
+			print_r($tokens);
 			
-			$friendship 	= $this->tweet->call('get', 'friendships/show', array('source_screen_name' => $user->screen_name, 'target_screen_name' => 'elliothaughin'));
-			var_dump($friendship);
+			$user = $this->tweet->call('get', 'account/verify_credentials');
+			
 		}
 	}
