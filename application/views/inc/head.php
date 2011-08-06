@@ -14,7 +14,7 @@
 	<link rel="dns-prefetch" href="//c95725.r25.cf3.rackcdn.com"> 
 	<link rel="dns-prefetch" href="//c95725.ssl.cf3.rackcdn.com"> 
  
-	<title>Feel The Vibe</title> 
+	<title><?php if (isset($title)) echo $title . ' - '; ?>Feel The Vibe</title> 
 	<meta name="description" content="Make any web page a document you can comment on paragraph by paragraph."> 
 	<meta name="author" content="Team Feel The Vibe"> 
 	
@@ -48,14 +48,10 @@
 	
 	<nav class="cwd_container" role="navigation"> 
 		<ul id="cwd_navigation" class="grid_12">  
-			<li class="current"><a href="/">.current</a></li>  
-	        <li class="dropdown"><a href="#">.dropdown</a> 
-	        	<ul> 
-	        		<li><a href="#">Lorem</a></li> 
-	        		<li><a href="#">Ipsum</a></li> 
-	        	</ul> 
-	        </li>  
-	        <li><a href="#">Lorem Ipsum</a></li> 
+			<li<?php if ($currentpage == 'home') echo ' class="current"'; ?>><a href="<?php echo site_url(); ?>">Home</a></li>
+			<li<?php if ($currentpage == 'create') echo ' class="current"'; ?>><a href="<?php echo site_url('create'); ?>">Create</a></li>
+	        <li<?php if ($currentpage == 'about') echo ' class="current"'; ?>><a href="<?php echo site_url('about'); ?>">About</a></li>
+	        <li<?php if ($currentpage == 'help') echo ' class="current"'; ?>><a href="<?php echo site_url('help'); ?>">Help</a></li>
     	</ul>  
 	</nav> 
 	
