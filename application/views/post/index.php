@@ -16,7 +16,7 @@
 		// Reset classes
 		$paragraph_classes = array();
 		
-		foreach ($paragraph_vibes->row() as $vibe){
+		foreach ($paragraph_vibes->result() as $vibe){
 			echo '<p>VIBE FOR P' . $vibe->paragraph . ' is ' . $vibe->vibe . '</p>';
 		}
 	
