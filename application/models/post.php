@@ -85,7 +85,8 @@ class Post extends CI_Model
 				
 				return array(
 					'title' => $post->title,
-					'content' => $post->content
+					'content' => $post->content,
+					'post_id' => $post->post_id
 				);
 			}
 			

@@ -13,6 +13,9 @@
 		// Get any vibes for the paragraph
 		$paragraph_vibes = $this->db->where('post_id',$post_id)->where('paragraph', $paragraph_id)->get('vibes');
 		
+		// Reset classes
+		$paragraph_classes = array();
+		
 		foreach ($paragraph_vibes->row() as $vibe){
 			echo '<p>VIBE FOR P' . $vibe->paragraph . ' is ' . $vibe->vibe . '</p>';
 		}
