@@ -42,6 +42,12 @@ class Parser extends CI_Model
 				$this->title = $this->readability->getTitle()->textContent;
 				$this->body = $this->readability->getContent()->innerHTML;
 				
+				// Remove attributes
+				$this->body = $this->_removeAttr($this->body);
+				
+				// Remove comments
+				$this->body = $this->_removeComments($this->body);
+				
 				// Tidy!
 				if (function_exists('tidy_parse_string'))
 				{
@@ -64,6 +70,29 @@ class Parser extends CI_Model
 			$this->error_message = $e->getMessage();
 			return FALSE;
 		}
+	}
+	
+	private function _removeAttr($html)
+	{
+		$regex = '/([^<]*<\s*[a-z](?:[0-9]|[a-z]{0,9}))(?:(?:\s*[a-z\-]{2,14}\s*=\s*(?:"[^"]*"|\'[^\']*\'))*)(\s*\/?>[^<]*)/i'; // match any start tag
+		
+		$chunks = preg_split($regex, $html, -1, PREG_SPLIT_DELIM_CAPTURE);
+		$chunkCount = count($chunks);
+		
+		$strippedString = '';
+		for ($n = 1; $n < $chunkCount; $n++)
+		{
+			$strippedString .= $chunks[$n];
+		}
+		
+		return $strippedString;
+	}
+	
+	private function _removeComments($html)
+	{
+		$regex = '/<!--(.*)-->/gm';
+		$html = preg_replace($regex, '', $html);
+		return $html;
 	}
 	
 	private function _reset()
