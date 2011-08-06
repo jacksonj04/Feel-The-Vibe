@@ -37,7 +37,8 @@ class View extends CI_Controller {
 	{
 		$data = array(
 			'success' => FALSE,
-			'error' => FALSE
+			'error' => FALSE,
+			'currentpage' => 'home'
 		);
 	
 		if ($this->input->post('create'))
