@@ -16,8 +16,8 @@
 	
 	<?php else: ?>
 	
-		<?php //echo form_open('', array('class'=>'box bg_light')); ?>
-		<form method="post">
+		<?php echo form_open('', array('class'=>'box bg_light')); ?>
+		
 			<p class="inputwrapper">
 				<label for="url">URL</label><br>
 				<input type="url" id="url" name="url" placeholder="Enter a URL here…" class="text">
@@ -27,7 +27,8 @@
 				<input type="submit" value="Parse the URL" name="create" id="create">
 			</p>
 		</form>
-		<?php // echo form_close(); ?>	
+		
+		<?php echo form_close(); ?>	
 	
 	<?php endif; ?>
 
