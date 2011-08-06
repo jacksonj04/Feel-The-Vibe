@@ -4,7 +4,7 @@ class Post_view extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		//$this->load->model('post');
+		$this->load->model('post');
 	}
 	
 	function index()
@@ -33,11 +33,6 @@ class Post_view extends CI_Controller {
 		}
 	}
 	
-	function hello()
-	{
-		echo 'hello';
-	}
-	
 	function create()
 	{
 		$data = array(
@@ -45,23 +40,11 @@ class Post_view extends CI_Controller {
 			'error' => FALSE
 		);
 		
-		/*var_dump($this->input->post());
-		
-		var_dump($_POST);
-		
-		var_dump($this->input->post('create'));
-		
-		//die;
-		*/
 		$head = array('currentpage' => 'create');
 	
 		if ($this->input->post('create'))
 		{			
-			
-			
 			$url = $this->input->post('url');
-			
-			die(var_dump($url));
 					
 			if ($this->parser->url($url))
 			{
