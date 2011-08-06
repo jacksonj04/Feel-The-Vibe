@@ -3,6 +3,10 @@
 	position: relative;
 }
 
+.no-js #viewer p {
+	padding: 5px 10px;
+}
+
 #viewer p.vibe3 {
 	background: #A3FFA3;
 }
@@ -52,3 +56,8 @@
 .para:hover .sharevibe {
 	display: inline-block;
 }
+
+.no-js .sharevibe {
+	display: none !important;
+}
+
