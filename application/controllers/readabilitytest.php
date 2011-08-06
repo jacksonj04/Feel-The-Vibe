@@ -13,6 +13,12 @@ class Readabilitytest extends CI_Controller {
 		$url = 'http://www.bbc.co.uk/news/world-us-canada-14428930';
 		$html = file_get_contents($url);
 		
+		if (function_exists('tidy_parse_string')) {
+			$tidy = tidy_parse_string($html, array('indent'=>true), 'UTF8');
+			$tidy->cleanRepair();
+			$html = $tidy->value;
+		}
+		
 		$readability->debug = TRUE;
 		$this->readability->get($html, $url);
 		
