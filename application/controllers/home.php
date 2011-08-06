@@ -11,4 +11,26 @@ class Home extends CI_Controller {
 		$this->load->view('home');
 		$this->load->view('inc/foot');
 	}
+	
+	public function about()
+	{
+	
+		$head['currentpage'] = 'about';
+		$head['title'] = 'About';
+	
+		$this->load->view('inc/head', $head);
+		$this->load->view('home');
+		$this->load->view('inc/foot');
+	}
+	
+	public function help()
+	{
+	
+		$head['currentpage'] = 'help';
+		$head['title'] = 'Help';
+	
+		$this->load->view('inc/head', $head);
+		$this->load->view('home');
+		$this->load->view('inc/foot');
+	}
 }

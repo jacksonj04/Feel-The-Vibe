@@ -45,6 +45,11 @@ $route['signin'] = 'signin/index';
 $route['signin/auth'] = 'signin/auth';
 
 $route['create'] = 'post_view/create';
+
+$route['about'] = 'home/about';
+$route['help'] = 'home/help';
+
+// Main viewing
 $route['(:any)'] = 'post_view/index';
 
 /* End of file routes.php */
