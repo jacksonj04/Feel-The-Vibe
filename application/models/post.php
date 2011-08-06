@@ -10,7 +10,7 @@ class Post extends CI_Model
 		parent::__construct();
 	}
 	
-	function add($title, $content, $series = NULL, $page = 1, $user_id = NULL)
+	function add($url, $title, $content, $series = NULL, $page = 1, $user_id = NULL)
 	{		
 		try
 		{
@@ -39,6 +39,7 @@ class Post extends CI_Model
 			}
 			
 			$add = array(
+				'orginal_url' => $url,
 				'title'		=> $title,
 				'content'	=> $content,
 				'generated'	=> time(),
