@@ -30,7 +30,7 @@
  
 <body> 
  
-	<header id="cwd_header" role="banner" style="background:red;"> 
+	<header id="cwd_header" role="banner" style="background:#A174B3;"> 
 	
 		<section class="cwd_container"> 
 	
