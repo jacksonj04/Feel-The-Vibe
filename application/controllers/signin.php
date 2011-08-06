@@ -6,11 +6,6 @@
 		{
 			parent::__construct();
 			
-			$this->load->library('tweet');
-			
-			// Enabling debug will show you any errors in the calls you're making, e.g:
-			$this->tweet->enable_debug(TRUE);
-			
 		}
 		
 		function index()
@@ -57,10 +52,23 @@
 				);
 			
 				$this->db->insert('users', $user_new);
+			
+			}else{
+			
+				// This is a returning user with changed details. Updatify!
 				
-				echo '<p>New User Created!</p>';
+				$user_update = array(
+					'twitter'				=>	$user->screen_name,
+					'name'					=>	$user->name
+				);
+			
+				$this->db->where->('oauth_token', $tokens['oauth_token'])->update('users', $user_update);
 			
 			}
+			
+			// All is theoretically good. Go home.
+			
+			redirect();
 			
 		}
 	}
