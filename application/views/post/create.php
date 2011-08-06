@@ -16,7 +16,7 @@
 	
 	<?php else: ?>
 	
-		<?php echo form_open('/create', array('class'=>'box bg_light')); ?>
+		<?php echo form_open('', array('class'=>'box bg_light')); ?>
 		
 			<p class="inputwrapper">
 				<label for="url">URL</label><br>
