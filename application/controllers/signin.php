@@ -40,11 +40,11 @@
 		{
 			$tokens = $this->tweet->get_tokens();
 			
-			print_r($tokens);
+			echo '<pre>' . print_r($tokens) . '</pre>';
 			
 			$user = $this->tweet->call('get', 'account/verify_credentials');
 			
-			echo '<p>' . $user->protected['screen_name'] . '</p>';
+			echo '<pre>' . print_r($user->protected, true) . '</pre>';
 			
 		}
 	}
