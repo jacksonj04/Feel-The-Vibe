@@ -55,7 +55,7 @@
 			<tbody>
 				<tr>
 					<th scope="row">Original Page</th>
-					<td><a href="<?php echo $cap_url; ?>"><?php $this->load->helper('text'); echo ellipsize($cap_url,20,0.6); ?></a></td>
+					<td><a href="<?php echo $cap_url; ?>"><?php $this->load->helper('text'); echo ellipsize($cap_url,25,0.75); ?></a></td>
 				</tr>
 				<tr>
 					<th scope="row">Captured On</th>
