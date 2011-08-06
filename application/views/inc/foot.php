@@ -34,6 +34,16 @@
 	
 	<script type="text/javascript">
 	
+		$(function(){
+		
+			$('.comment').each(function(){
+			
+				alert ('ZOMG COMMENT: ' + $(this).attr('data-paragraph'));
+			
+			});
+		
+		});
+	
 	</script>
 		
 </body> 

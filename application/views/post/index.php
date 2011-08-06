@@ -69,15 +69,19 @@
 		
 	}else{
 	
+		echo '<div style="position:relative">';
+	
 		foreach ($comments->result() as $comment){
 		
-			echo '<div class="box bg_light"> 
+			echo '<div id="comment' . $comment->comment_id . '" data-paragraph="' . $comment->paragraph . '" class="comment box bg_light"> 
 		
-			<p id="comment' . $comment->comment_id . '" data-paragraph="' . $comment->paragraph . '">' . $comment->text . '</p>
+			<p>' . $comment->text . '</p>
 			
 			</div>';
 		
 		}
+		
+		echo '</div>';
 		
 	}
 	
