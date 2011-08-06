@@ -5,3 +5,26 @@
 #viewer p:hover {
 	background: #EEE;
 }
+
+#viewer p.vibe3 {
+	background: #9ed47b;
+}
+
+#viewer p.vibe2 {
+	background: #ccdf8f;
+}
+
+#viewer p.vibe1 {
+	background: #e3ecc0;
+}
+
+#viewer p.vibe-3 {
+	background: #e8a291;
+}
+
+#viewer p.vibe-2 {
+	background: #debfb6;
+}
+#viewer p.vibe-1 {
+	background: #f6e1df;
+}
