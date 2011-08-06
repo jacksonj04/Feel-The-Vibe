@@ -52,8 +52,8 @@
 				$user_new = array(
 					'twitter'				=>	$user->screen_name,
 					'name'					=>	$user->name,
-					'oauth_token'			=>	$tokens->oauth_token,
-					'oauth_token_secret'	=>	$tokens->oauth_token_secret
+					'oauth_token'			=>	$tokens['oauth_token'],
+					'oauth_token_secret'	=>	$tokens['oauth_token_secret']
 				);
 			
 				$this->db->insert('users', $user_new);
