@@ -1,4 +1,7 @@
+#viewer p {
+	padding: 5px 10px;
+}
+
 #viewer p:hover {
 	background: #EEE;
-	padding: 5px 10px;
 }
