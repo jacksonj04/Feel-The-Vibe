@@ -1,5 +1,4 @@
 <?php
-
 class Post extends CI_Model
 {
 
@@ -13,50 +12,57 @@ class Post extends CI_Model
 	
 	function add($title, $content, $series = NULL, $page = 1, $user_id = NULL)
 	{		
-		$title = trim($title);
-		$content = trim($content);
-		
-		if ( $title !== '' || $content !== '')
+		try
 		{
-			return FALSE;
+			$title = trim($title);
+			$content = trim($content);
+			
+			if ( $title !== '' || $content !== '')
+			{
+				throw new Exception ('Empty title or content');
+			}
+					
+			if ($series == NULL)
+			{
+				$series = substr(md5(uniqid()), 0, 10);
+			}
+			
+			if ($page !== 1)
+			{
+				$this->page = $page;
+			}
+			
+			$short_url = NULL;
+			if ($su = $this->_shorturl())
+			{
+				$short_url = $su;
+			}
+			
+			$add = array(
+				'title'		=> $title,
+				'content'	=> $content,
+				'generated'	=> time(),
+				'shorturl'	=> $short_url,
+				'user_id'	=> $user_id,
+				'series_id'	=> $series,
+				'page'		=> $page
+			);
+			
+			if ($this->db->insert('posts', $add))
+			{
+				return $this->_permalink();
+			}
+			
+			else
+			{
+				throw new Exception ('Failed to save post in the database');
+			}
 		}
-				
-		if ($series == NULL)
+		
+		catch (Exception $e)
 		{
-			$series = substr(md5(uniqid()), 0, 10);
+			$this->error_message = $e->getMessage();
 		}
-		
-		if ($page !== 1)
-		{
-			$this->page = $page;
-		}
-		
-		$short_url = NULL;
-		if ($su = $this->_shorturl())
-		{
-			$short_url = $su;
-		}
-		
-		$add = array(
-			'title'		=> $title,
-			'content'	=> $content,
-			'generated'	=> time(),
-			'shorturl'	=> $short_url,
-			'user_id'	=> $user_id,
-			'series_id'	=> $series,
-			'page'		=> $page
-		);
-		
-		if ($this->db->insert('posts', $add))
-		{
-			return $this->_permalink();
-		}
-		
-		else
-		{
-			return FALSE;
-		}
-		
 	}
 	
 	private function _shorturl()
@@ -64,6 +70,11 @@ class Post extends CI_Model
 		if ($short = file_get_contents('http://lncn.eu/api?longurl=' . urlencode($this->_permalink())))
 		{
 			return $short;
+		}
+		
+		else
+		{
+			return FALSE;
 		}
 	}
 	
