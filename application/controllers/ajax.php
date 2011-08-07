@@ -143,7 +143,7 @@ class Ajax extends CI_Controller {
 	
 	public function comment()
 	{
-		if (($this->input->post('post') !== FALSE) && ($this->input->post('paragraph') !== FALSE) && $this->input->post('text') && $this->input->is_ajax_request())
+		if (($this->input->post('post') !== FALSE) && ($this->input->post('paragraph') !== FALSE) && $this->input->post('text', TRUE) && $this->input->is_ajax_request())
 		{
 			// We have post and paragraph. Validation time!
 			$post_db = $this->db->where('post_id', $this->input->post('post'))->get('posts');
