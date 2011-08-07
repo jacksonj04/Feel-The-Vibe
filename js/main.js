@@ -40,6 +40,6 @@ $(function(){
 	$('#toggleHeatMap').toggle(hideHeatMap, showHeatMap);
 	
 	$('.vibe-up').bind('click', vibeUp);
-	$('.vibe-down').bind('click', vibeDown);
+	//$('.vibe-down').bind('click', vibeDown);
 
 });
