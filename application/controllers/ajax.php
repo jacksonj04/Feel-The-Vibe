@@ -143,7 +143,10 @@ class Ajax extends CI_Controller {
 	
 	public function comment()
 	{
-	
+		var_dump($this->input->post('post'));
+		var_dump($this->input->post('paragraph'));
+		var_dump($this->input->post('text'));
+		
 		if ($this->input->post('post') && $this->input->post('paragraph') && $this->input->post('text'))
 		{
 			// We have post and paragraph. Validation time!
