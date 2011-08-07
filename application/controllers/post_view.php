@@ -127,7 +127,7 @@ class Post_view extends CI_Controller {
 					
 					if ($this->parser->url($urls[0]))
 					{
-						if ($series = $this->post->add($url, $this->parser->title, $this->parser->content, NULL, 1, $user->user_id, 'series'))
+						if ($series = $this->post->add($urls[0], $this->parser->title, $this->parser->content, NULL, 1, $user->user_id, 'series'))
 						{
 							unset($urls[0]);
 							
