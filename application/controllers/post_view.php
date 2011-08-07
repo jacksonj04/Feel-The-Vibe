@@ -118,7 +118,7 @@ class Post_view extends CI_Controller {
 			if ($user = $this->user->getcurrent())
 			{
 		
-				$urls = $this->input->post('multiurl[]');
+				$urls = $this->input->post('multiurl');
 				
 				die(var_dump($urls));
 				
