@@ -142,3 +142,7 @@
 	vertical-align: middle;
 	margin-left: 20px;
 }
+
+#pageinfo p + p {
+	margin-top: 0px;
+}
