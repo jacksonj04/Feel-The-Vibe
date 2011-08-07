@@ -10,7 +10,7 @@ class Post extends CI_Model
 		parent::__construct();
 	}
 	
-	function add($url, $title, $content, $series = NULL, $page = 1, $user_id = NULL)
+	function add($url, $title, $content, $series = NULL, $page = 1, $user_id = NULL, $return = 'permalink')
 	{		
 		try
 		{
@@ -52,7 +52,15 @@ class Post extends CI_Model
 			
 			if ($this->db->insert('posts', $add))
 			{
-				return $this->_permalink();
+				switch ($return)
+				{
+					case 'series':
+						return $this->series;
+					break;
+					default:
+						return $this->_permalink();
+					break;
+				}
 			}
 			
 			else

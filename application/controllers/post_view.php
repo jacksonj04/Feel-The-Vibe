@@ -120,29 +120,44 @@ class Post_view extends CI_Controller {
 		
 				$urls = $this->input->post('multiurl');
 				
-				die(var_dump($urls));
-				
-				$posts_db = $this->db->where('original_url', $url)->get('posts');
-				
-				
-				$this->load->model('parser');
-				
-				if ($this->parser->url($url))
+				if (count($urls) > 0)
 				{
-					if ($p = $this->post->add($url, $this->parser->title, $this->parser->content, NULL, 1, $user->user_id))
+					// Submit the first one				
+					$this->load->model('parser');
+					
+					if ($this->parser->url($url))
 					{
-						$data['success'] = $p;
+						if ($series = $this->post->add($url, $this->parser->title, $this->parser->content, NULL, 1, $user->user_id, 'series'))
+						{
+							unset($urls[0]);
+							
+							if (count($urls) > 0)
+							{
+								$i = 1;
+								foreach ($urls as $url)
+								{
+									$i++;
+									if ($this->parser->url($url))
+									{
+										$this->post->add($url, $this->parser->title, $this->parser->content, $series, $i, $user->user_id, 'series');
+									}
+								}
+							}
+							
+							$data['success'] = $link = site_url() . $series;
+						}
+						
+						else
+						{
+							$data['error'] = $this->parser->error_message;
+						}
 					}
 					
 					else
 					{
 						$data['error'] = $this->parser->error_message;
 					}
-				}
 				
-				else
-				{
-					$data['error'] = $this->parser->error_message;
 				}
 					
 
