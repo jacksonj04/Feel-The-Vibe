@@ -86,7 +86,7 @@ $(function(){
 		
 		else
 		{
-			$('#commentscontainer').stop().animate({'top':'210px'});
+			$('#commentscontainer').stop().animate({'top':'260px'});
 		}
 		
 	}).hashchange();
