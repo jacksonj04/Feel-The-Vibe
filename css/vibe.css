@@ -114,8 +114,8 @@
 .comment article {
     float: left;
     margin: 10px 10px 10px 0;
-    padding: 0 5px 5px 0;
-    width: 210px;
+    padding: 0px 5px 0px 0px;
+    width: 190px;
 }
 
 .comment article aside {
