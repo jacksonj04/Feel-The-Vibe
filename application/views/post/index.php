@@ -109,7 +109,7 @@
 			
 			<div id="commentwindow">
 			
-				<div class="comment">
+				<div class="comment clearfix">
 					<a href="#" class="avatar">
 						<img src="http://img.tweetimag.es/i/alexbilbie_m" />
 					</a>
@@ -119,7 +119,7 @@
 					</article>
 				</div>
 				
-				<div class="comment">
+				<div class="comment clearfix">
 					<a href="#" class="avatar">
 						<img src="http://img.tweetimag.es/i/alexbilbie_m" />
 					</a>

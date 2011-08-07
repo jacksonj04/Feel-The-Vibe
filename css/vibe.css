@@ -78,19 +78,27 @@
 }
 
 #commentwindow {
-
+	border-top: 1px solid #CCCCCC;
+    height: 80px;
+    margin-top: 10px;
+    overflow: auto;
+    padding-top: 10px;
 }
 
 .comment {
+	background: white;
+}
 
+.comment + .comment {
+	margin-top: 10px;
 }
 
 .comment .avatar {
-
+	float: left;
 }
 
 .comment article {
-
+	float: left;
 }
 
 .comment article aside {
