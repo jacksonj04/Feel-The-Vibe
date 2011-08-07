@@ -142,6 +142,26 @@
 
 					<div class="commentwindow" id="commentwindow_-1">
 					
+						<?php
+						if (isset($comments['-1']))
+						{
+							foreach ($comments['-1'] as $comment)
+							{
+							?>
+							<div class="comment clearfix">
+								<a href="http://twitter.com/<?php echo $comment['twitter']; ?>" class="avatar">
+									<img src="http://img.tweetimag.es/i/<?php echo $comment['twitter']; ?>_m" />
+								</a>
+								<article>
+									<aside><a href="http://twitter.com/<?php echo $comment['twitter']; ?>">@<?php echo $comment['twitter']; ?></a> said:</aside>
+									<?php echo $comment['comment']; ?>
+								</article>
+							</div>
+							<?php
+							}
+						}
+						?>
+					
 					</div>
 					
 				</div>
@@ -181,6 +201,26 @@
 					<div class="newcommentcontainer">
 	
 						<div class="commentwindow" id="commentwindow_<?php echo $i; ?>">
+						
+							<?php
+							if (isset($comments[$i]))
+							{
+								foreach ($comments[$i] as $comment)
+								{
+								?>
+								<div class="comment clearfix">
+									<a href="http://twitter.com/<?php echo $comment['twitter']; ?>" class="avatar">
+										<img src="http://img.tweetimag.es/i/<?php echo $comment['twitter']; ?>_m" />
+									</a>
+									<article>
+										<aside><a href="http://twitter.com/<?php echo $comment['twitter']; ?>">@<?php echo $comment['twitter']; ?></a> said:</aside>
+										<?php echo $comment['comment']; ?>
+									</article>
+								</div>
+								<?php
+								}
+							}
+							?>
 						
 						</div>
 						
