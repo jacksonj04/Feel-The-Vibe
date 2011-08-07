@@ -76,7 +76,11 @@ $(function(){
 	$('.para').click(function(){
 		var id = $(this).attr('id');
 		$('#'+id+'_comments').click();
-		window.location.href = window.location.href + '#' + id;
+		
+		if (location.hash !== '#'+id)
+		{
+			window.location.href = window.location.href + '#' + id;
+		}
 	});
 	
 	// Fake a click when the hash changes
