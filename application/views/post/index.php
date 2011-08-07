@@ -113,15 +113,31 @@
 			<h3><a href="#">General Comments</a></h3>
 			<div>
 				
-				<form method="post">
+				<?php if ($this->user->getcurrent()): ?>
+					
+					<form method="post">
+			
+						<p>
+							<label for="newcomment">Add your comment</label><br>
+							<textarea name="newcomment" class="newcomment"></textarea>
+							<input type="submit" value="Add comment" class="addnewcomment" name="addnewcomment">
+						</p>
+					
+					</form>
+					
+					<?php else: ?>
+					
+					<h3>Sign In</h3>
+			
+					<p>Oh no, you're not signed in yet!</p>
 			
 					<p>
-						<label for="newcomment">Add your comment</label><br>
-						<textarea name="newcomment" class="newcomment"></textarea>
-						<input type="submit" value="Add comment" class="addnewcomment" name="addnewcomment">
+						<a href="<?php echo site_url('signin'); ?>">
+							<img src="<?php echo base_url() . 'img/signin.png'; ?>" title="Sign in with Twitter">
+						</a>
 					</p>
-				
-				</form>
+					
+					<?php endif; ?>
 				
 				<div class="newcommentcontainer">
 
@@ -155,7 +171,7 @@
 					
 					<h3>Sign In</h3>
 			
-					<p>Oh no, you\'re not signed in yet!</p>
+					<p>Oh no, you're not signed in yet!</p>
 			
 					<p>
 						<a href="<?php echo site_url('signin'); ?>">
