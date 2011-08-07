@@ -21,14 +21,14 @@
 	{
 	
 		// Get any vibes for the paragraph
-		$paragraph_vibes = $this->db->where('post_id',$post_id)->where('paragraph', $paragraph_id+1)->get('vibes');
+		$paragraph_vibes = $this->db->where('post_id',$post_id)->where('paragraph', $paragraph_id)->get('vibes');
 		
 		// Reset classes
 		$paragraph_classes = array();
 		
 		// If there's a current user *get their vibe*
 		if ($user = $this->user->getcurrent()){
-			$user_vibe = $this->db->where('post_id',$post_id)->where('paragraph', $paragraph_id+1)->where('user_id', $user->user_id)->get('vibes');
+			$user_vibe = $this->db->where('post_id',$post_id)->where('paragraph', $paragraph_id)->where('user_id', $user->user_id)->get('vibes');
 			if ($user_vibe->num_rows() == 1){
 				$vibe_given = $user_vibe->row();
 				$paragraph_classes[] = 'vibegiven' . $vibe_given->vibe;
@@ -59,12 +59,12 @@
 		$paragraph_classes[] = $data_vibe;
 	
 		// Output the tag with all relevant classes and stuff
-		echo '<' . $paragraph_tag . ' data-vibe="'.$data_vibe.'" id="para_' . ($paragraph_id+1) . '" class="para ' . implode(' ', $paragraph_classes) . '">' . $paragraphs[2][$paragraph_id+1];
+		echo '<' . $paragraph_tag . ' data-vibe="'.$data_vibe.'" id="para_' . $paragraph_id . '" class="para ' . implode(' ', $paragraph_classes) . '">' . $paragraphs[2][$paragraph_id];
 		
 		if ($this->user->getcurrent()){
 			echo '<span class="sharevibe">
-					<a href="#" class="vibe-up" data-paraid="'.($paragraph_id+1).'" title="I\'m feeling this!"></a>
-					<a href="#" title="I\'m not feeling this!" data-paraid="'.($paragraph_id+1).'" class="vibe-down"></a>
+					<a href="#" class="vibe-up" data-paraid="'.$paragraph_id.'" title="I\'m feeling this!"></a>
+					<a href="#" title="I\'m not feeling this!" data-paraid="'.$paragraph_id.'" class="vibe-down"></a>
 				</span>';
 		}
 		
@@ -134,7 +134,7 @@
 			
 			</div>
 			
-			<?php $i = 1; while ($i !== $num_paragraphs): ?>
+			<?php $i = 0; while ($i !== $num_paragraphs): ?>
 			
 				<h3><a href="#" id="para_<?php echo $i; ?>_comments">Paragraph <?php echo $i; ?></a></h3>
 				<div>
