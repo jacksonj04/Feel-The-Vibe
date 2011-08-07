@@ -1,5 +1,14 @@
 <div class="grid_12">
 	<h1><?php echo $title; ?></h1>
+	
+	<?php
+	
+	if (!$this->user->getcurrent()) {
+		echo '<p>Want to share your vibes and comment on this? <a href="' . site_url('signin') . '">Sign in</a>!</p>';
+	}
+	
+	?>
+	
 </div>
 
 <div class="grid_8 vibeson" id="viewer" data-postid="<?php echo $post_id; ?>"> 
