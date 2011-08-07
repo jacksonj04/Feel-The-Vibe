@@ -1,17 +1,17 @@
 <div class="grid_12">
-	<h1><?php echo $title; ?></h1>
-	
+	<h1><?php echo $title; ?></h1>	
+</div>
+
+<div class="grid_8 vibeson" id="viewer" data-postid="<?php echo $post_id; ?>">
+
 	<?php
 	
 	if (!$this->user->getcurrent()) {
-		echo '<p>Want to share your vibes and comment on this? <a href="' . site_url('signin') . '">Sign in</a>!</p>';
+		echo '<div class="box bg_contrast"><p>Want to share your vibes and comment on this? <a href="' . site_url('signin') . '">Sign in</a>!</p></div>';
 	}
 	
 	?>
-	
-</div>
 
-<div class="grid_8 vibeson" id="viewer" data-postid="<?php echo $post_id; ?>"> 
 	
 	<?php
 	
@@ -196,43 +196,5 @@
 		</div>
 		
 	</div>
-	
-	<?php
-	
-	/*if ($comments->num_rows() == 0){
-	
-		// No comments. Throw up a comment promo box.
-	
-		echo '<div class="box bg_contrast"> 
-		
-			<h3>Comments Plz!</h3>';
-			
-			if ($this->tweet->logged_in()){
-				echo '<p>We don\'t yet have any comments on this page. To leave yours just click on the paragraph which sparked your thoughts.</p>';
-			}else{
-				echo '<p>We don\'t yet have any comments on this page. To leave yours you\'ll first need to <a href="' . site_url('signin') . '">sign in</a>.</p>';
-			}
-		
-		echo '</div>';
-		
-	}else{
-	
-		echo '<div style="position:relative">';
-	
-		foreach ($comments->result() as $comment){
-		
-			echo '<div id="comment' . $comment->comment_id . '" data-paragraph="' . $comment->paragraph . '" class="comment box bg_light"> 
-		
-			<p>' . $comment->text . '</p>
-			
-			</div>';
-		
-		}
-		
-		echo '</div>';
-		
-	}*/
-	
-	?>
-			
+				
 </aside>
