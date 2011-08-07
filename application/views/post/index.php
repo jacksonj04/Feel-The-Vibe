@@ -99,9 +99,9 @@
 			
 			<form method="post">
 			
-				<p>
+				<p class="inputwrapper">
 					<label for="newcomment">Your comment</label><br>
-					<textarea name="newcomment" id="newcomment" class="text"></textarea>
+					<textarea name="newcomment" id="newcomment" class=""></textarea>
 				</p>
 			
 			</form>
