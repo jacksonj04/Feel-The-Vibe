@@ -16,8 +16,9 @@
 	<?php
 	
 	// Loop through all our incoming tags
-	$num_paragraphs = 0;
-	foreach ($paragraphs[1] as $paragraph_id => $paragraph_tag){
+	$num_paragraphs = count($paragraphs[1]);
+	foreach ($paragraphs[1] as $paragraph_id => $paragraph_tag)
+	{
 	
 		// Get any vibes for the paragraph
 		$paragraph_vibes = $this->db->where('post_id',$post_id)->where('paragraph', $paragraph_id)->get('vibes');
@@ -68,8 +69,6 @@
 		}
 		
 		echo '</' . $paragraph_tag . '>';
-		
-		$num_paragraphs++;
 	}
 	
 	?>

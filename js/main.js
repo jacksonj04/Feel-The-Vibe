@@ -56,5 +56,10 @@ $(function(){
 	
 	$('.vibe-up').bind('click', vibeUp);
 	$('.vibe-down').bind('click', vibeDown);
+	
+	if ($('#allcommentcontainer').length == 1)
+	{
+		$('#allcommentcontainer').accordion();
+	}
 
 });
