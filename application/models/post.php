@@ -107,6 +107,11 @@ class Post extends CI_Model
 		}
 	}
 	
+	public function comments($postid)
+	{
+		
+	}
+	
 	private function _shorturl()
 	{
 		if ($short = file_get_contents('http://lncn.eu/api?longurl=' . urlencode($this->_permalink())))
