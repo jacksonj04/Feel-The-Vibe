@@ -6,11 +6,10 @@
 
 	<?php if (!$this->user->getcurrent()): ?>
 	<div class="box bg_contrast margin_bottom">
-		<p>Want to share your vibes and comment on this?
-			<a href="<?php echo site_url('signin'); ?>">
-				<img src="<?php echo base_url() . 'img/signin.png'; ?>" title="Sign in with Twitter">
-			</a>
-		</p>
+		Want to share your vibes and comment on this?
+		<a href="<?php echo site_url('signin'); ?>">
+			<img src="<?php echo base_url() . 'img/signin.png'; ?>" title="Sign in with Twitter">
+		</a>
 	</div>
 	<?php endif; ?>
 
