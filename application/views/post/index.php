@@ -97,7 +97,7 @@
 		    $pagelinks[] = '<a href="' . site_url($series . '/' . $i) . '">' . $i . '</a>';
 		}
 	
-		echo '<div style="background:#EEE;"><p style="text-align:right;">Page ' . $seriesnumber . ' of ' . $seriestotal . '<br>' . implode(', ', $pagelinks) . '</p></div>';
+		echo '<div style="background:#EEE;"><p>Page ' . $seriesnumber . ' of ' . $seriestotal . '<br>' . implode(', ', $pagelinks) . '</p></div>';
 	}
 	
 	?>
