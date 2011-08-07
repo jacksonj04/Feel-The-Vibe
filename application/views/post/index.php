@@ -139,6 +139,8 @@
 				<h3><a href="#" id="para_<?php echo $i; ?>_comments">Paragraph <?php echo ($i+1); ?></a></h3>
 				<div>
 					
+					<?php if ($this->user->getcurrent()): ?>
+					
 					<form method="post">
 			
 						<p>
@@ -148,6 +150,20 @@
 						</p>
 					
 					</form>
+					
+					<?php else: ?>
+					
+					<h3>Sign In</h3>
+			
+					<p>Oh no, you\'re not signed in yet!</p>
+			
+					<p>
+						<a href="<?php echo site_url('signin'); ?>">
+							<img src="<?php echo base_url() . 'img/signin.png'; ?>" title="Sign in with Twitter">
+						</a>
+					</p>
+					
+					<?php endif; ?>
 					
 					<div class="newcommentcontainer">
 	
