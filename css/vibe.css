@@ -82,10 +82,11 @@
 
 .newcomment {
 	height: 75px;
+	width: 245px;
 }
 
 .addnewcomment {
-	width: 265px;
+	width: 235px;
 }
 
 .commentwindow {

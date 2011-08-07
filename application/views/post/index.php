@@ -115,7 +115,7 @@
 				
 				<form method="post">
 			
-					<p class="inputwrapper">
+					<p>
 						<label for="newcomment">Add your comment</label><br>
 						<textarea name="newcomment" class="newcomment"></textarea>
 						<input type="submit" value="Add comment" class="addnewcomment" name="addnewcomment">
@@ -141,7 +141,7 @@
 					
 					<form method="post">
 			
-						<p class="inputwrapper">
+						<p>
 							<label for="newcomment">Add your comment</label><br>
 							<textarea name="newcomment" class="newcomment"></textarea>
 							<input type="submit" value="Add comment" class="addnewcomment" name="addnewcomment">
