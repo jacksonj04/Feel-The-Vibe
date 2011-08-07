@@ -20,6 +20,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0"> 
  
 	<link rel="stylesheet" href="http://c94471.r71.cf3.rackcdn.com/cwd.css">
+	<link rel="stylesheet" href="http://c94471.r71.cf3.rackcdn.com/ui.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/vibe.css"> 
 	<script src="http://c94471.r71.cf3.rackcdn.com/modernizr.js"></script> 
 	

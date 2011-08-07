@@ -25,7 +25,8 @@
 	</footer> 
  
 	<!-- Put all JavaScript code below this line --> 
-	<script src="http://c94471.r71.cf3.rackcdn.com/jquery.js" type="text/javascript"></script> 
+	<script src="http://c94471.r71.cf3.rackcdn.com/jquery.js" type="text/javascript"></script>
+	<script src="http://c94471.r71.cf3.rackcdn.com/ui.js" type="text/javascript"></script>
 	<!--[if (lt IE 9) & (!IEMobile)]>
 		<script src="http://c94471.r71.cf3.rackcdn.com/DOMAssistantCompressed-2.8.js"></script>
 		<script src="http://c94471.r71.cf3.rackcdn.com/selectivizr-1.0.1.js"></script>

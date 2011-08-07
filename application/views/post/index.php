@@ -16,7 +16,7 @@
 	<?php
 	
 	// Loop through all our incoming tags
-	
+	$num_paragraphs = 0;
 	foreach ($paragraphs[1] as $paragraph_id => $paragraph_tag){
 	
 		// Get any vibes for the paragraph
@@ -64,11 +64,12 @@
 			echo '<span class="sharevibe">
 					<a href="#" class="vibe-up" data-paraid="'.$paragraph_id.'" title="I\'m feeling this!"></a>
 					<a href="#" title="I\'m not feeling this!" data-paraid="'.$paragraph_id.'" class="vibe-down"></a>
-				</span>
-				<a href="#" class="commentonme" data-paraid="'.$paragraph_id.'"><span></span>Comment</a>';
+				</span>';
 		}
 		
 		echo '</' . $paragraph_tag . '>';
+		
+		$num_paragraphs++;
 	}
 	
 	?>
@@ -108,41 +109,29 @@
 	
 	<div class="box bg_light" id="commentscontainer">
 		
-		<div id="newcommentcontainer">
+		<form method="post" hidden>
 			
-			<form method="post">
+			<p class="inputwrapper">
+				<label for="newcomment">Add your comment</label><br>
+				<textarea name="newcomment" id="newcomment" class=""></textarea>
+				<input type="submit" value="Add comment" id="addnewcomment" name="addnewcomment">
+			</p>
+		
+		</form>
+		
+		<div id="allcommentcontainer">
+		
+			<h3><a href="#">General Comments</a></h3>
+			<div>Hello</div>
 			
-				<p class="inputwrapper">
-					<label for="newcomment">Add your comment</label><br>
-					<textarea name="newcomment" id="newcomment" class=""></textarea>
-					<input type="submit" value="Add comment" id="addnewcomment" name="addnewcomment">
-				</p>
+			<?php for ($i = 1; $i == $num_paragraphs; $i++) { ?>
 			
-			</form>
-			
-			<div id="commentwindow">
-			
-				<div class="comment clearfix">
-					<a href="#" class="avatar">
-						<img src="http://img.tweetimag.es/i/jacksonj04_m" />
-					</a>
-					<article>
-						<aside><a href="#">@jacksonj04</a> said:</aside>
-						This is awesome.
-					</article>
+				<h3><a href="#">Paragraph <?php echo $i; ?></a></h3>
+				<div>
+					Hello
 				</div>
-				
-				<div class="comment clearfix">
-					<a href="#" class="avatar">
-						<img src="http://img.tweetimag.es/i/alexbilbie_m" />
-					</a>
-					<article>
-						<aside><a href="#">@alexbilbie</a> said:</aside>
-						Lorem aye where there's muck there's brass sit amet, gerritetten breadcake elit. Nullam tha knows nisl nec gerritetten shu' thi gob appens as maybe Aliquam erat any rooad.
-					</article>
-				</div>
-			
-			</div>
+						
+			<?php } ?>
 		
 		</div>
 		
