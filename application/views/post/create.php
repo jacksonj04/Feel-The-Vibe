@@ -58,7 +58,7 @@
 		
 			<p>Tell us the address of the page you want to make commentable, then relax whilst we do some magic. Your page will be with you in a few seconds.</p>
 		
-			<?php echo form_open('', array('class'=>'box bg_light')); ?>
+			<?php echo form_open(''); ?>
 			
 				<p>
 					<label for="submiturl" class="visuallyhidden">Enter a URL</label><br>
