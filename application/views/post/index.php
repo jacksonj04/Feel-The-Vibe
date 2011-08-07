@@ -136,7 +136,7 @@
 			
 			<?php $i = 0; while ($i !== $num_paragraphs): ?>
 			
-				<h3><a href="#" id="para_<?php echo $i; ?>_comments">Paragraph <?php echo $i; ?></a></h3>
+				<h3><a href="#" id="para_<?php echo $i; ?>_comments">Paragraph <?php echo ($i+1); ?></a></h3>
 				<div>
 					
 					<form method="post">
