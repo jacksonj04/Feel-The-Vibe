@@ -59,7 +59,7 @@
 		$paragraph_classes[] = $data_vibe;
 	
 		// Output the tag with all relevant classes and stuff
-		echo '<' . $paragraph_tag . ' data-vibe="'.$data_vibe.'" id="para_' . $paragraph_id+1 . '" class="para ' . implode(' ', $paragraph_classes) . '">' . $paragraphs[2][$paragraph_id+1];
+		echo '<' . $paragraph_tag . ' data-vibe="'.$data_vibe.'" id="para_' . ($paragraph_id+1) . '" class="para ' . implode(' ', $paragraph_classes) . '">' . $paragraphs[2][$paragraph_id+1];
 		
 		if ($this->user->getcurrent()){
 			echo '<span class="sharevibe">
