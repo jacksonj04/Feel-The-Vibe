@@ -123,7 +123,14 @@ $(function(){
 			type:	'POST',
 			url:	'/ajax/comment',
 			data:	'post='+postid+'&paragraph='+para+'&text='+comment,
-			dataType: 'json'
+			dataType: 'json',
+			success: function(resp)
+				{
+					//if (resp.message == 'Comment added!')
+					//{
+						alert(resp.message);
+					//}
+				}
 		});
 	
 	});
