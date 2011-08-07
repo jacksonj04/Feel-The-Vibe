@@ -2,9 +2,11 @@
 		
 	<h1>Got something to say?</h1>
 	
-	<p>Feel The Vibe lets you take any web page and turn it into a document you can comment on paragraph by paragraph. Take a news article and add your annotations and opinions, share your views on the latest government white paper, let people instantly comment on your work and more.</p>
+	<h3>Feel The Vibe lets you take any web page and turn it into a document you can comment on paragraph by paragraph.</h3>
 	
-	<h2>Recent Documents</h2>
+	<p>Take a news article and add your annotations and opinions, share your views on the latest government white paper, let people instantly comment on your work and more.</p>
+	
+	<h2 class="border_top padding_top">Recent Documents</h2>
 	
 	<p>Here are the latest things that people have been commenting on.</p>
 	
