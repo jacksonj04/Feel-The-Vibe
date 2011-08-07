@@ -18,7 +18,7 @@ function vibeUp(e)
 	
 	var para = $(this).data('paraid');
 	
-	$(this).addClass('vibegivenup');
+	$('#para_'+para).addClass('vibegivenup');
 	
 	var postid = $('#viewer').data('postid');
 	
@@ -36,7 +36,7 @@ function vibeDown(e)
 	
 	var para = $(this).data('paraid');
 	
-	$(this).addClass('vibegivendown');
+	$('#para_'+para).addClass('vibegivendown');
 	
 	var postid = $('#viewer').data('postid');
 	
