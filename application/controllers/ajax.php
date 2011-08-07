@@ -153,11 +153,13 @@ class Ajax extends CI_Controller {
 				// Post exists, be happy
 				$user = $this->user->getcurrent();
 				
+				$comment = $this->security->xss_clean($this->input->post('text'));
+				
 				$comment = array(
 					'user_id'	=>	$user->user_id,
 					'post_id'	=>	$this->input->post('post'),
 					'paragraph'	=>	$this->input->post('paragraph'),
-					'text'		=>	$this->input->post('text'),
+					'text'		=>	$comment,
 					'timestamp' =>	time()
 				);
 				
