@@ -121,7 +121,7 @@ class Ajax extends CI_Controller {
 	public function unvibe()
 	{
 	
-		if ($this->input->post('post') && $this->input->post('paragraph') && $this->input->is_ajax_request()){
+		if (is_int($this->input->post('post')) && is_int($this->input->post('paragraph')) && $this->input->is_ajax_request()){
 			// We have post and paragraph. Validation time!
 			$post_db = $this->db->where('post_id', $this->input->post('post'))->get('posts');
 			if ($post_db->num_rows() == 1){
@@ -143,11 +143,7 @@ class Ajax extends CI_Controller {
 	
 	public function comment()
 	{
-		var_dump($this->input->post('post'));
-		var_dump($this->input->post('paragraph'));
-		var_dump($this->input->post('text'));
-		
-		if ($this->input->post('post') && $this->input->post('paragraph') && $this->input->post('text'))
+		if (is_int($this->input->post('post')) && is_int($this->input->post('paragraph')) && $this->input->post('text') && $this->input->is_ajax_request())
 		{
 			// We have post and paragraph. Validation time!
 			$post_db = $this->db->where('post_id', $this->input->post('post'))->get('posts');
