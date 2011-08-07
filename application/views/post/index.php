@@ -4,13 +4,15 @@
 
 <div class="grid_8 vibeson" id="viewer" data-postid="<?php echo $post_id; ?>">
 
-	<?php
-	
-	if (!$this->user->getcurrent()) {
-		echo '<div class="box bg_contrast margin_bottom"><p>Want to share your vibes and comment on this? <a href="' . site_url('signin') . '">Sign in</a>!</p></div>';
-	}
-	
-	?>
+	<?php if (!$this->user->getcurrent()): ?>
+	<div class="box bg_contrast margin_bottom">
+		<p>Want to share your vibes and comment on this?
+			<a href="<?php echo site_url('signin'); ?>">
+				<img src="<?php echo base_url() . 'img/signin.png'; ?>" title="Sign in with Twitter">
+			</a>
+		</p>
+	</div>
+	<?php endif; ?>
 
 	
 	<?php
