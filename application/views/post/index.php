@@ -85,7 +85,7 @@
 					<td><a href="<?php echo $shorturl; ?>"><?php echo $shorturl; ?></a></td>
 				</tr>
 				<tr>
-					<td>Display Vibes</td>
+					<th scope="row">Display Vibes</th>
 					<td><a href="#" id="toggleHeatMap">On/Off</td>
 				</tr>
 			</tbody>
