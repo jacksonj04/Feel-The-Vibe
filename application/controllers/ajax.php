@@ -157,7 +157,8 @@ class Ajax extends CI_Controller {
 					'user_id'	=>	$user->user_id,
 					'post_id'	=>	$this->input->post('post'),
 					'paragraph'	=>	$this->input->post('paragraph'),
-					'text'		=>	$this->input->post('text')
+					'text'		=>	$this->input->post('text'),
+					'timestamp' =>	time()
 				);
 				
 				$this->db->insert('comments', $comment);

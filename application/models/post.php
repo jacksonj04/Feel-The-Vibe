@@ -109,6 +109,23 @@ class Post extends CI_Model
 	
 	public function comments($postid)
 	{
+		$comments_query = $this->db->query('SELECT users.`twitter` AS `twitter`, comments.paragraph AS `paragraph`, comments.text AS `comment`, comments.timestamp AS `timestamp` FROM comments JOIN users ON users.user_id = comments.user_id WHERE comments.post_id = '.$postid.' ORDER BY paragraph');
+		
+		$comments = array();
+		
+		if ($comments_query->num_rows() > 0)
+		{
+			foreach ($comments_query->result() as $comment)
+			{
+				$comments[(string)$comment->paragraph] = array(
+					'twitter' => $comment->twitter,
+					'comment' => $comment->comment,
+					'timestamp' => $comment->timestamp
+				);
+			}
+		}
+		
+		return $comments;
 		
 	}
 	
