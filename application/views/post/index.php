@@ -111,7 +111,14 @@
 		
 		<div id="allcommentcontainer">
 		
-			<h3><a href="#">General Comments</a></h3>
+			<?php
+			$count = 0;
+			if (isset($comments['-1']))
+			{
+				$count = count($comments['-1']);
+			}
+			?>
+			<h3><a href="#">General Comments (<?php echo $count; ?> comments)</a></h3>
 			<div>
 				
 				<?php if ($this->user->getcurrent()): ?>
@@ -170,8 +177,15 @@
 			</div>
 			
 			<?php $i = 0; while ($i !== $num_paragraphs): ?>
-			
-				<h3><a href="#" id="para_<?php echo $i; ?>_comments">Paragraph <?php echo ($i+1); ?></a></h3>
+				
+				<?php
+				$count = 0;
+				if (isset($comments[$i]))
+				{
+					$count = count($comments[$i]);
+				}
+				?>
+				<h3><a href="#" id="para_<?php echo $i; ?>_comments">Paragraph <?php echo ($i+1); ?> (<?php echo $count; ?> comments)</a></h3>
 				<div>
 					
 					<?php if ($this->user->getcurrent()): ?>
