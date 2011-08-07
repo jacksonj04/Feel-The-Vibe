@@ -120,8 +120,8 @@
 			
 						<p>
 							<label for="newcomment">Add your comment</label><br>
-							<textarea name="newcomment" class="newcomment"></textarea>
-							<input type="submit" value="Add comment" class="addnewcomment" name="addnewcomment">
+							<textarea name="newcomment" class="newcomment" id="para_newcomment_-1"></textarea>
+							<input type="submit" value="Add comment" class="addnewcomment" name="addnewcomment" data-paraid="-1">
 						</p>
 					
 					</form>
@@ -140,7 +140,7 @@
 				
 				<div class="newcommentcontainer">
 
-					<div class="commentwindow">
+					<div class="commentwindow" id="commentwindow_-1">
 					
 					</div>
 					
@@ -180,7 +180,7 @@
 					
 					<div class="newcommentcontainer">
 	
-						<div class="commentwindow">
+						<div class="commentwindow" id="commentwindow_<?php echo $i; ?>">
 						
 						</div>
 						

@@ -60,6 +60,19 @@ function vibeDown(e)
 	});
 }
 
+function prependComment(para, comment)
+{
+	$('#commentwindow_'+para).prepend('<div class="comment clearfix">
+			<a href="#" class="avatar">
+				<img src="http://img.tweetimag.es/i/alexbilbie_m" />
+			</a>
+			<article>
+				<aside><a href="#">@alexbilbie</a> said:</aside>
+				'+comment+'
+			</article>
+		</div>');
+}
+
 $(function(){
 	
 	// Fake a click when the hash changes
@@ -126,10 +139,15 @@ $(function(){
 			dataType: 'json',
 			success: function(resp)
 				{
-					//if (resp.message == 'Comment added!')
-					//{
+					if (resp.message == 'Comment added!')
+					{
+						prependComment(para, comment);
+					}
+					
+					else
+					{
 						alert(resp.message);
-					//}
+					}
 				}
 		});
 	
