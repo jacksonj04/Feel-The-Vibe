@@ -32,6 +32,8 @@ class Post_view extends CI_Controller {
 				
 				$post['comments'] = $this->post->comments($post['post_id']);
 				
+				die(print_r($post['comments']));
+				
 				$this->load->view('inc/head', $head);
 				$this->load->view('post/index', $post);
 				$this->load->view('inc/foot');
