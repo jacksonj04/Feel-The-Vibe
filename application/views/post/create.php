@@ -36,6 +36,20 @@
 		
 		</ul>
 		
+		<p>Not what you're after? Click the button!</p>
+		
+		<?php echo form_open('', array('class'=>'box bg_light')); ?>
+
+					<input type="hidden" id="url" name="url" value = "<?php echo $url; ?>">
+					<input type="hidden" id="forceparse" name="forceparse" value = "forceparse">
+				
+				<p>
+					<input type="submit" value="Create a new copy" name="create" id="create">
+				</p>
+			</form>
+			
+			<?php echo form_close(); ?>
+		
 		<?php else: ?>
 		
 			<p>Tell us the address of the page you want to make commentable, then relax whilst we do some magic. Your page will be with you in a few seconds.</p>

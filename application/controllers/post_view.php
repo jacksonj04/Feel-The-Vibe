@@ -90,6 +90,7 @@ class Post_view extends CI_Controller {
 					// Things already exist. Tell the user.
 					
 					$data['exists'] = $posts_db;
+					$data['url'] = $url;
 				
 				}
 			}else{
