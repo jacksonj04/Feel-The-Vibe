@@ -22,8 +22,7 @@ function vibeUp(e)
 {
 	e.preventDefault();
 	
-	var para = $(this).parents().find('.para').attr('id');
-	para = para.replace('para_', '');
+	var para = $(this).data('paraid');
 	
 	var postid = $('#viewer').data('postid');
 	
