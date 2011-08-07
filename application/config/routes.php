@@ -53,7 +53,7 @@ $route['about'] = 'home/about';
 $route['help'] = 'home/help';
 
 // Main viewing
-$route['(:any)'] = 'post_view/index';
+$route['(:any)'] = "post_view/index/$1";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

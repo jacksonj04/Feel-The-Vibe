@@ -7,15 +7,8 @@ class Post_view extends CI_Controller {
 		$this->load->model('post');
 	}
 	
-	function index()
+	function index($series, $page = 1)
 	{
-		$series = $this->uri->segment(1);
-		$page = $this->uri->segment(2);
-		
-		if ( ! $page)
-		{
-			$page = 1;
-		}
 		
 		if ($series)
 		{
