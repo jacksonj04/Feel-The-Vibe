@@ -122,7 +122,7 @@ class Ajax extends CI_Controller {
 				echo json_encode(array('error' => 'Post does not exist.'));
 			}
 		}else{
-			echo json_encode(array('error'=>'Unable to complete vibe down.'));
+			echo json_encode(array('error'=>'Unable to complete unvibe.'));
 		}
 		
 	}
