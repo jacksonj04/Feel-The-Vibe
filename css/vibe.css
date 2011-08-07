@@ -130,6 +130,7 @@
     padding-top: 0px;
     width: 288px;
     position: fixed;
+    z-index: 100;
 }
 
 .ui-accordion .ui-accordion-content {
