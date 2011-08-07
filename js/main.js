@@ -89,7 +89,19 @@ $(function(){
 		$(location.hash).click();
 	});
 	
-	// Trigger hash change on page load
-	$(window).hashchange();
+	// Scroll the comments container automatically + trigger hash change on page load
+	$(window).bind('scroll', function(){
+		
+		if (window.pageYOffset > 180)
+		{
+			$('#commentscontainer').stop().animate({'top':'20px'});
+		}
+		
+		else
+		{
+			$('#commentscontainer').stop().animate({'top':'210px'});
+		}
+		
+	}).hashchange();
 
 });
