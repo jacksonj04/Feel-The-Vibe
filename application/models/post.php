@@ -117,7 +117,11 @@ class Post extends CI_Model
 		{
 			foreach ($comments_query->result() as $comment)
 			{
-				$comments[(string)$comment->paragraph] = array(
+				if ( ! is_array($comments[(string)$comment->paragraph]))
+				{
+					$comments[(string)$comment->paragraph] = array();
+				}
+				$comments[(string)$comment->paragraph][] = array(
 					'twitter' => $comment->twitter,
 					'comment' => $comment->comment,
 					'timestamp' => $comment->timestamp
