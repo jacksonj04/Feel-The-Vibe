@@ -127,10 +127,8 @@
 					</form>
 					
 					<?php else: ?>
-					
-					<h3>Sign In</h3>
-			
-					<p>Oh no, you're not signed in yet!</p>
+								
+					<p>Sign in to add a comment</p>
 			
 					<p>
 						<a href="<?php echo site_url('signin'); ?>">
@@ -170,9 +168,7 @@
 					
 					<?php else: ?>
 					
-					<h3>Sign In</h3>
-			
-					<p>Oh no, you're not signed in yet!</p>
+					<p>Sign in to add a comment</p>
 			
 					<p>
 						<a href="<?php echo site_url('signin'); ?>">
