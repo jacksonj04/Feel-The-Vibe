@@ -81,7 +81,7 @@ $(function(){
 	
 	// Fake a click when the hash changes
 	$(window).hashchange(function(){
-		$('#'+location.hash).click();
+		$(location.hash).click();
 	});
 	
 	// Trigger hash change on page load
