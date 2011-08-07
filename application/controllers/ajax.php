@@ -16,15 +16,6 @@ class Ajax extends CI_Controller {
 		}
 	}
 
-	public function test(){
-	
-		echo '<form action="' . site_url('ajax/vibeup') . '" method="post">
-			<p><input type="text" name="post"></p>
-			<p><input type="text" name="paragraph"></p>
-			<p><input type="submit" value="test"></p>
-		</form>';
-	}
-
 	public function vibeup()
 	{
 	
@@ -85,7 +76,7 @@ class Ajax extends CI_Controller {
 	public function vibedown()
 	{
 	
-		if ($this->input->post('post') && $this->input->post('paragraph')){
+		if ($this->input->post('post') && $this->input->post('paragraph') && $this->input->is_ajax_request()){
 			// We have post and paragraph. Validation time!
 			$post_db = $this->db->where('post_id', $this->input->post('post'))->get('posts');
 			if ($post_db->num_rows() == 1){
@@ -130,7 +121,7 @@ class Ajax extends CI_Controller {
 	public function unvibe()
 	{
 	
-		if ($this->input->post('post') && $this->input->post('paragraph')){
+		if ($this->input->post('post') && $this->input->post('paragraph') && $this->input->is_ajax_request()){
 			// We have post and paragraph. Validation time!
 			$post_db = $this->db->where('post_id', $this->input->post('post'))->get('posts');
 			if ($post_db->num_rows() == 1){
@@ -146,6 +137,35 @@ class Ajax extends CI_Controller {
 			}
 		}else{
 			echo json_encode(array('error'=>'Unable to complete vibe down.'));
+		}
+		
+	}
+	
+	public function comment()
+	{
+	
+		if ($this->input->post('post') && $this->input->post('paragraph') && $this->input->post('text') && $this->input->is_ajax_request()){
+			// We have post and paragraph. Validation time!
+			$post_db = $this->db->where('post_id', $this->input->post('post'))->get('posts');
+			if ($post_db->num_rows() == 1){
+				// Post exists, be happy
+				$user = $this->user->getcurrent();
+				
+				$comment = array(
+					'user_id'	=>	$user->user_id,
+					'post_id'	=>	$this->input->post('post'),
+					'paragraph'	=>	$this->input->post('paragraph'),
+					'text'		=>	$this->input->post('text')
+				);
+				
+				echo json_encode(array('message' => 'Comment added!'));
+				
+			}else{
+				// Post doesn't exist, something has gone wrong.
+				echo json_encode(array('error' => 'Post does not exist.'));
+			}
+		}else{
+			echo json_encode(array('error'=>'Unable to add comment.'));
 		}
 		
 	}
