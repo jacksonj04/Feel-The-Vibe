@@ -18,6 +18,10 @@ class Post_view extends CI_Controller {
 			
 			$series_count = $this->db->where('series_id', $series)->get('posts');
 			
+			if ($series_count->num_rows() == 0){
+				show_404();
+			}
+			
 			$post['seriestotal'] = $series_count->num_rows();
 			$post['seriesnumber'] = $page;
 			
