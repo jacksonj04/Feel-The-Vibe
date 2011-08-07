@@ -70,19 +70,30 @@
 					<th scope="row">Short Link</th>
 					<td><a href="<?php echo $shorturl; ?>"><?php echo $shorturl; ?></a></td>
 				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td><a href="#" id="toggleHeatMap">Toggle vibe heat map</td>
+				</tr>
 			</tbody>
 		</table>
 			
 	</div>
 	
-	<div class="box bg_light">
-		<p>
-			I'm a floaty comment box!
-		</p>
+	<div class="box bg_light" id="commentscontainer">
 		
-		<p>
-			<a href="#" id="toggleHeatMap">Toggle vibe heat map
-		</p>
+		<div id="newcommentcontainer">
+			
+			<form method="post">
+			
+				<p>
+					<label for="newcomment">Your comment</label><br>
+					<textarea name="newcomment" id="newcomment" class="text"></textarea>
+				</p>
+			
+			</form>
+		
+		</div>
+		
 	</div>
 	
 	<?php
