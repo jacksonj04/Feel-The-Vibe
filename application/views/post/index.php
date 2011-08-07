@@ -98,10 +98,6 @@
 					<th scope="row">Short Link</th>
 					<td><a href="<?php echo $shorturl; ?>"><?php echo $shorturl; ?></a></td>
 				</tr>
-				<tr>
-					<th scope="row">Display Vibes</th>
-					<td><a href="#" id="toggleHeatMap">On/Off</td>
-				</tr>
 			</tbody>
 		</table>
 			
@@ -185,6 +181,8 @@
 						</div>
 						
 					</div>
+					
+					<p><a href="#" id="toggleHeatMap">Show/Hide Vibes</a></p>
 					
 				</div>
 						
