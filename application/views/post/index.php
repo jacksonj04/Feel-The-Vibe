@@ -1,5 +1,18 @@
 <div class="grid_12">
-	<h1><?php echo $title; ?></h1>	
+	<h1><?php echo $title; ?></h1>
+	
+	<div class="grid_12 first margin_bottom border_bottom padding_bottom">
+		<p class="grid_9">
+			<a href="<?php echo $cap_url; ?>" title="<?php $this->load->helper('text'); echo ellipsize($cap_url,25,0.75); ?>">Original page</a> 
+			submitted by 
+			<a href="http://twitter.com/<?php echo $cap_user_details->twitter; ?>"><?php echo $cap_user_details->name; ?></a>
+			on
+			<?php echo date('D j M, g.ia', $cap_time); ?>
+		</p>
+		<p class="grid_3 last align-right">
+			<a href="#" id="toggleHeatMap">Toggle vibe heatmap on/off</a>
+		</p>
+	</div>
 </div>
 
 <div class="grid_8 vibeson" id="viewer" data-postid="<?php echo $post_id; ?>">
