@@ -2,7 +2,7 @@
 	<h1><?php echo $title; ?></h1>
 </div>
 
-<div class="grid_8" id="viewer" data-postid="<?php echo $post_id; ?>"> 
+<div class="grid_8" id="viewer" class="vibeson" data-postid="<?php echo $post_id; ?>"> 
 	
 	<?php
 	
@@ -40,8 +40,13 @@
 		$paragraph_classes[] = $data_vibe;
 	
 		// Output the tag with all relevant classes and stuff
-		echo '<' . $paragraph_tag . ' data-vibe="'.$data_vibe.'" id="para_' . $paragraph_id . '" class="para ' . implode(' ', $paragraph_classes) . '">' . $paragraphs[2][$paragraph_id] . '<span class="sharevibe"><a href="#" class="vibe-up" data-paraid="'.$paragraph_id.'" title="I\'m feeling this!"></a><a href="#" title="I\'m not feeling this!" data-paraid="'.$paragraph_id.'" class="vibe-down"></a></span>
-		</' . $paragraph_tag . '>';
+		echo '<' . $paragraph_tag . ' data-vibe="'.$data_vibe.'" id="para_' . $paragraph_id . '" class="para ' . implode(' ', $paragraph_classes) . '">' . $paragraphs[2][$paragraph_id];
+		
+		if ($this->tweet->logged_in()){
+			echo '<span class="sharevibe"><a href="#" class="vibe-up" data-paraid="'.$paragraph_id.'" title="I\'m feeling this!"></a><a href="#" title="I\'m not feeling this!" data-paraid="'.$paragraph_id.'" class="vibe-down"></a></span>';
+		}
+		
+		echo '</' . $paragraph_tag . '>';
 	}
 	
 	?>

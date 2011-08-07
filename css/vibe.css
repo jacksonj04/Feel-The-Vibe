@@ -7,30 +7,30 @@
 	padding: 5px 10px;
 }
 
-#viewer p.vibe3 {
+#viewer.vibeson p.vibe3 {
 	background: #A3FFA3;
 }
 
-#viewer p.vibe2 {
+#viewer.vibeson p.vibe2 {
 	background: #C8FFC8;
 }
 
-#viewer p.vibe1 {
+#viewer.vibeson p.vibe1 {
 	background: #E6FFE6;
 }
 
-#viewer p.vibe-3 {
+#viewer.vibeson p.vibe-3 {
 	background: #FFA3A3;
 }
 
-#viewer p.vibe-2 {
+#viewer.vibeson p.vibe-2 {
 	background: #FFC8C8;
 }
-#viewer p.vibe-1 {
+#viewer.vibeson p.vibe-1 {
 	background: #FFE6E6;
 }
 
-#viewer p:hover {
+#viewer.vibeson p:hover {
 	background: #EEE;
 }
 

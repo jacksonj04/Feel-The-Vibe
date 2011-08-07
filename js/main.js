@@ -2,20 +2,14 @@ function showHeatMap(e)
 {
 	e.preventDefault();
 	
-	$('.para').each(function(i){
-	
-		var vibe = $(this).data('vibe');
-		
-		$(this).addClass(vibe);
-	
-	});
+	$('#viewer').addClass('vibeson');
 }
 
 function hideHeatMap(e)
 {
 	e.preventDefault();
 	
-	$('.vibe3,.vibe2,.vibe1,.vibe-1,.vibe-2,.vibe-3,.vibe0').removeClass('vibe0 vibe3 vibe2 vibe1 vibe-1 vibe-2 vibe-3');
+	$('#viewer').removeClass('vibeson');
 }
 
 function vibeUp(e)
