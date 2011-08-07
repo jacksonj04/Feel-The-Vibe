@@ -61,5 +61,13 @@ $(function(){
 	{
 		$('#allcommentcontainer').accordion({ autoHeight: false });
 	}
+	
+	$('.para').click(function(){
+	
+		var id = $(this).attr('id');
+		
+		$('#'+id+'_comments').click();
+		
+	});
 
 });
