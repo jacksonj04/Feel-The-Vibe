@@ -18,7 +18,7 @@
 			Awesome, you've created <a href="<?php echo $success; ?>"><?php echo $success; ?></a>
 		</div>
 		
-		<?php elseif ($exists) : ?>
+		<?php elseif (isset($exists)) : ?>
 		
 		<h2>We've done this already!</h2>
 		
