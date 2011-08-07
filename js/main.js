@@ -78,5 +78,13 @@ $(function(){
 		$('#'+id+'_comments').click();
 		window.location.href = window.location.href + '#para_' + id;
 	});
+	
+	// Fake a click when the hash changes
+	$(window).hashchange(function(){
+		$('#'+location.hash).click();
+	});
+	
+	// Trigger hash change on page load
+	$(window).hashchange();
 
 });
