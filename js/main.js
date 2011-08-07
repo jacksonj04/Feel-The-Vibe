@@ -60,9 +60,13 @@ function vibeDown(e)
 	});
 }
 
+function htmlEntities(str) {
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
 function prependComment(para, comment, user)
 {
-	$('#commentwindow_'+para).prepend('<div class="comment clearfix"><a href="#" class="avatar"><img src="http://img.tweetimag.es/i/'+user+'_m" /></a><article><aside><a href="http://twitter.com/'+user+'">@'+user+'</a> said:</aside>'+comment+'</article></div>');
+	$('#commentwindow_'+para).prepend('<div class="comment clearfix"><a href="#" class="avatar"><img src="http://img.tweetimag.es/i/'+user+'_m" /></a><article><aside><a href="http://twitter.com/'+user+'">@'+user+'</a> said:</aside>'+htmlEntities(comment)+'</article></div>');
 }
 
 $(function(){
