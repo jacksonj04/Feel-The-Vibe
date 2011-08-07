@@ -69,6 +69,43 @@ function prependComment(para, comment, user)
 	$('#commentwindow_'+para).prepend('<div class="comment clearfix"><a href="#" class="avatar"><img src="http://img.tweetimag.es/i/'+user+'_m" /></a><article><aside><a href="http://twitter.com/'+user+'">@'+user+'</a> said:</aside>'+htmlEntities(comment)+'</article></div>');
 }
 
+function addNewComment(e)
+{
+	e.preventDefault();
+
+	var para = $(this).data('paraid');
+	var comment = $('#para_newcomment_'+para).val();
+	var postid = $('#viewer').data('postid');
+	
+	$.ajax({
+		type:	'POST',
+		url:	'/ajax/comment',
+		data:	'post='+postid+'&paragraph='+para+'&text='+ encodeURI(comment),
+		dataType: 'json',
+		success: function(resp)
+			{
+				if (resp.message == 'Comment added!')
+				{
+					prependComment(para, comment, resp.twitter);
+				}
+				
+				else
+				{
+					alert(resp.error);
+				}
+			},
+		error: function()
+			{
+				alert('Ooops, unable to add comment due to transport error');
+			}
+	});
+}
+
+function addAnotherURL()
+{
+	$('#addanother').before('<p class="inputwrapper"><input type="url" name="multiurl[]" placeholder="Enter a URL here…" class="text"></p>');
+}
+
 $(function(){
 	
 	// Fake a click when the hash changes
@@ -119,39 +156,11 @@ $(function(){
 		}
 	});
 	
-	// Comment
-	$('.addnewcomment').bind('click', function(e){
+	// Add a comment
+	$('.addnewcomment').bind('click', addNewComment);
 	
-		e.preventDefault();
-	
-		var para = $(this).data('paraid');
-		var comment = $('#para_newcomment_'+para).val();
-		var postid = $('#viewer').data('postid');
-		
-		$.ajax({
-			type:	'POST',
-			url:	'/ajax/comment',
-			data:	'post='+postid+'&paragraph='+para+'&text='+ encodeURI(comment),
-			dataType: 'json',
-			success: function(resp)
-				{
-					if (resp.message == 'Comment added!')
-					{
-						prependComment(para, comment, resp.twitter);
-					}
-					
-					else
-					{
-						alert(resp.error);
-					}
-				},
-			error: function()
-				{
-					alert('Ooops, unable to add comment due to transport error');
-				}
-		});
-	
-	});
+	// Add another multi url
+	$('#addanother').bind('click', addAnotherURL);
 
 
 });

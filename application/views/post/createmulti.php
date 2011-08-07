@@ -66,10 +66,14 @@
 						<input type="url" name="multiurl[]" placeholder="Enter a URL here…" class="text">
 					</p>
 					
+					<p id="addanother">
+						<a href="#">Add another URL</a>
+					</p>
+					
 				</div>
 				
-				<p>
-					<input type="submit" value="Make a commentable document!" name="create" id="create">
+				<p class="margin_top">
+					<input type="submit" value="Make a commentable document out of these URLs!" name="create" id="create">
 				</p>
 								
 			</form>
