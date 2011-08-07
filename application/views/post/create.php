@@ -67,7 +67,7 @@
 				</p>
 				
 				<p>
-					<a href="/createmulti">Click here if you want to create a multi page document?</a>
+					<a href="/createmulti">Click here if you want to create a multi page document</a>
 				</p>
 				
 			</form>
