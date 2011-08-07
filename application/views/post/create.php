@@ -29,7 +29,11 @@
 		<?php
 		
 			foreach ($exists->result() as $existing){
-				echo '<li><a href="' . site_url($existing->series_id) . '">' . $existing->title . '</a> retrieved ' . date('l jS F, g.ia', $existing->generated) . '</li>';
+			
+				$count_comments = $this->db->where('post_id', $existing->post_id)->get('comments');
+				$count_vibes = $this->db->where('post_id', $existing->post_id)->get('vibes');
+			
+				echo '<li><a href="' . site_url($existing->series_id) . '">' . $existing->title . '</a> retrieved ' . date('l jS F, g.ia', $existing->generated) . '<br>' . $count_comments->num_rows() . ' comments, ' . $count_vibes->num_rows() . ' vibes.</li>';
 			}
 		
 		?>
