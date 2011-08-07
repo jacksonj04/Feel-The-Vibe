@@ -101,8 +101,9 @@ function addNewComment(e)
 	});
 }
 
-function addAnotherURL()
+function addAnotherURL(e)
 {
+	e.preventDefault();
 	$('#addanother').before('<p class="inputwrapper"><input type="url" name="multiurl[]" placeholder="Enter a URL here…" class="text"></p>');
 }
 
