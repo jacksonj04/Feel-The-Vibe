@@ -20,7 +20,21 @@
 		
 		<?php elseif ($exists) : ?>
 		
-		<h2>We've found existing pages!</h2>
+		<h2>We've done this already!</h2>
+		
+		<p>There is already at least one version of this document which is being commented on. We strongly recommend you use one of these, but if you really want to you can create a whole new copy (for example if the text on the page has changed substantially.</p>
+		
+		<ul>
+		
+		<?php
+		
+			foreach ($exists->result() as $existing){
+				echo '<li><a href="' . site_url($existing->series_id) . '">' . $existing->title . '</a> retrieved ' . date('l jS F, g.ia', $existing->generated) . '</li>';
+			}
+		
+		?>
+		
+		</ul>
 		
 		<?php else: ?>
 		
