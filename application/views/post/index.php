@@ -7,7 +7,7 @@
 	<?php
 	
 	if (!$this->user->getcurrent()) {
-		echo '<div class="box bg_contrast"><p>Want to share your vibes and comment on this? <a href="' . site_url('signin') . '">Sign in</a>!</p></div>';
+		echo '<div class="box bg_contrast margin_bottom"><p>Want to share your vibes and comment on this? <a href="' . site_url('signin') . '">Sign in</a>!</p></div>';
 	}
 	
 	?>
