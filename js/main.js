@@ -127,7 +127,7 @@ $(function(){
 		$.ajax({
 			type:	'POST',
 			url:	'/ajax/comment',
-			data:	'post='+postid+'&paragraph='+para+'&text='+comment,
+			data:	'post='+postid+'&paragraph='+para+'&text='+ encodeURI(comment),
 			dataType: 'json',
 			success: function(resp)
 				{
@@ -140,6 +140,10 @@ $(function(){
 					{
 						alert(resp.error);
 					}
+				},
+			error: function()
+				{
+					alert('Ooops, unable to add comment due to transport error');
 				}
 		});
 	
