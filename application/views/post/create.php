@@ -60,14 +60,12 @@
 		
 			<?php echo form_open('', array('class'=>'box bg_light')); ?>
 			
-				<p class="inputwrapper">
-					<label for="url">URL</label><br>
-					<input type="url" id="url" name="url" placeholder="Enter a URL here…" class="text">
+				<p>
+					<label for="submiturl" class="visuallyhidden">Enter a URL</label><br>
+					<input type="url" id="submiturl" name="url" placeholder="Enter a URL here…" class="text">
+					<input type="submit" value="Make this page commentable!" name="create" id="create">
 				</p>
 				
-				<p>
-					<input type="submit" value="Parse the URL" name="create" id="create">
-				</p>
 			</form>
 			
 			<?php echo form_close(); ?>
