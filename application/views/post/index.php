@@ -7,7 +7,13 @@
 			submitted by 
 			<a href="http://twitter.com/<?php echo $cap_user_details->twitter; ?>"><?php echo $cap_user_details->name; ?></a>
 			on
-			<?php echo date('D j M, g.ia', $cap_time); ?>
+			<?php echo date('D j M, g.ia', $cap_time); 
+			
+			if ($seriestotal != 1){
+				echo '<br>Page ' . $seriesnumber . ' of ' . $seriestotal;
+			}
+			
+			?>
 		</p>
 		<p class="grid_3 last align-right">
 			<a href="#" id="toggleHeatMap">Toggle vibe heatmap on/off</a>

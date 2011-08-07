@@ -14,6 +14,11 @@ class Post_view extends CI_Controller {
 		{
 			$post = $this->post->get($series, $page);
 			
+			$series = $this->db->where('series_id', $series)->get('posts');
+			
+			$post['seriestotal'] = $series->num_rows();
+			$post['seriesnumber'] = $page;
+			
 			if ($post)
 			{
 				$head['title'] = $post['title'];
