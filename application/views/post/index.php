@@ -64,7 +64,7 @@
 
 <aside class="grid_4 last"> 
 
-	<div class="box bg_light">
+	<div class="box bg_light" hidden>
 		
 		<table>
 			<tbody>
@@ -113,7 +113,7 @@
 	
 	<?php
 	
-	if ($comments->num_rows() == 0){
+	/*if ($comments->num_rows() == 0){
 	
 		// No comments. Throw up a comment promo box.
 	
@@ -145,7 +145,7 @@
 		
 		echo '</div>';
 		
-	}
+	}*/
 	
 	?>
 			
