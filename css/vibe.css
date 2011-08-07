@@ -91,7 +91,7 @@
 
 .commentwindow {
 	border-top: 1px solid #CCCCCC;
-    height: 120px;
+    max-height: 120px;
     margin-top: 10px;
     overflow: auto;
     padding-top: 10px;
@@ -127,6 +127,7 @@
 	overflow: auto;
 	border-bottom: 10px solid #EEEEEE;
     border-top: 10px solid #EEEEEE;
+    padding-top: 0px;
 }
 
 .ui-accordion .ui-accordion-content {
