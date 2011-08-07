@@ -121,7 +121,7 @@
 		<div id="allcommentcontainer">
 		
 			<h3><a href="#">General Comments</a></h3>
-			<div>Hello</div>
+			<div>Hello <?php echo $num_paragraphs; ?></div>
 			
 			<?php for ($i = 1; $i == $num_paragraphs; $i++) { ?>
 			
