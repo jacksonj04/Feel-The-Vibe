@@ -1,6 +1,6 @@
 <h1 class="grid_12 margin_bottom">Create a New Page</h1>
 
-<div class="grid_8 first">
+<div class="grid_8">
 
 	<?php
 	
