@@ -90,6 +90,15 @@
 		
 		echo '</' . $paragraph_tag . '>';
 	}
+
+	if ($seriestotal != 1){
+	
+		for ($i = 1; $i <= $seriestotal; $i++) {
+		    $pagelinks[] = '<a href="' . site_url($series . '/' . $i) . '">' . $i . '</a>';
+		}
+	
+		echo '<div style="background:#EEE;"><p style="text-align:right;">Page ' . $seriesnumber . ' of ' . $seriestotal . '<br>' . implode(', ', $pagelinks) . '</p></div>';
+	}
 	
 	?>
 	
@@ -268,16 +277,3 @@
 	</div>
 				
 </aside>
-
-<?
-
-if ($seriestotal != 1){
-
-	for ($i = 1; $i <= $seriestotal; $i++) {
-	    $pagelinks[] = '<a href="' . site_url($series . '/' . $i) . '">' . $i . '</a>';
-	}
-
-	echo '<div class="grid_12"><p style="text-align:right;">Page ' . $seriesnumber . ' of ' . $seriestotal . '<br>' . implode(', ', $pagelinks) . '</p>';
-}
-			
-// EOF
