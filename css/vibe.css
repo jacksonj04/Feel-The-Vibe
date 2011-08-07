@@ -69,3 +69,10 @@
 	display: none !important;
 }
 
+#newcomment {
+	height: 75px;
+}
+
+#addnewcomment {
+	width: 285px;
+}

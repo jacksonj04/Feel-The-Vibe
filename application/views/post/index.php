@@ -102,6 +102,7 @@
 				<p class="inputwrapper">
 					<label for="newcomment">Your comment</label><br>
 					<textarea name="newcomment" id="newcomment" class=""></textarea>
+					<input type="submit" value="Add comment" id="addnewcomment" name="addnewcomment">
 				</p>
 			
 			</form>
