@@ -38,7 +38,7 @@
 		
 		<p>Not what you're after? Click the button!</p>
 		
-		<?php echo form_open('', array('class'=>'box bg_light')); ?>
+		<?php echo form_open(''); ?>
 
 					<input type="hidden" id="url" name="url" value = "<?php echo $url; ?>">
 					<input type="hidden" id="forceparse" name="forceparse" value = "forceparse">
