@@ -161,6 +161,8 @@ class Ajax extends CI_Controller {
 					'text'		=>	$this->input->post('text')
 				);
 				
+				$this->db->insert('comments', $comment);
+				
 				echo json_encode(array('message' => 'Comment added!', 'twitter' => $user->twitter));
 				
 			}
