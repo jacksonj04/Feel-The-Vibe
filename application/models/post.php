@@ -117,7 +117,7 @@ class Post extends CI_Model
 		{
 			foreach ($comments_query->result() as $comment)
 			{
-				if ( ! is_array($comments[(string)$comment->paragraph]))
+				if (isset($comments[(string)$comment->paragraph]) && ! is_array($comments[(string)$comment->paragraph]))
 				{
 					$comments[(string)$comment->paragraph] = array();
 				}
