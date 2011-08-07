@@ -34,6 +34,14 @@
 	background: #EEE;
 }
 
+.vibegivenup {
+	border-right: 2px solid #00FF00;
+}
+
+.vibegivendown {
+	border-right: 2px solid #FF0000;
+}
+
 .vibe-up, .vibe-down {
 	background: url(http://c95725.r25.cf3.rackcdn.com/2d8b37-16-2-73.png) no-repeat;
 	width: 16px;
