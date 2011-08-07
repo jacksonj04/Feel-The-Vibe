@@ -111,10 +111,10 @@
 			
 				<div class="comment clearfix">
 					<a href="#" class="avatar">
-						<img src="http://img.tweetimag.es/i/alexbilbie_m" />
+						<img src="http://img.tweetimag.es/i/jacksonj04_m" />
 					</a>
 					<article>
-						<aside>@alexbilbie said:</aside>
+						<aside><a href="#">@jacksonj04</a> said:</aside>
 						This is awesome.
 					</article>
 				</div>
@@ -124,7 +124,7 @@
 						<img src="http://img.tweetimag.es/i/alexbilbie_m" />
 					</a>
 					<article>
-						<aside>@alexbilbie said:</aside>
+						<aside><a href="#">@alexbilbie</a> said:</aside>
 						Lorem aye where there's muck there's brass sit amet, gerritetten breadcake elit. Nullam tha knows nisl nec gerritetten shu' thi gob appens as maybe Aliquam erat any rooad.
 					</article>
 				</div>
