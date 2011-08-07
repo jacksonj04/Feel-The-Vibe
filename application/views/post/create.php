@@ -66,7 +66,7 @@
 					<input type="submit" value="Make this page commentable!" name="create" id="create">
 				</p>
 				
-				<p>
+				<p hidden>
 					<a href="/createmulti">Click here if you want to create a multi page document</a>
 				</p>
 				
