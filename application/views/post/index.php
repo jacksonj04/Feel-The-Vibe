@@ -78,7 +78,7 @@
 				</tr>
 				<tr>
 					<th scope="row">Captured By</th>
-					<td><?php echo $cap_user; ?></td>
+					<td><?php echo $cap_user_details->name; ?></td>
 				</tr>
 				<tr>
 					<th scope="row">Short Link</th>

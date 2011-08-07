@@ -18,5 +18,16 @@ class User extends CI_Model
 			return false;
 		}
 	}
+	
+	function getid($id)
+	{		
+		$user_db = $this->db->where('user_id', $id)->get('users');
+		if ($user_db->num_rows() == 1){
+			return $user_db->row();
+		}else{
+			// No user. Return false.
+			return false;
+		}
+	}
 
 }

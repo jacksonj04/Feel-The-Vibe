@@ -26,6 +26,8 @@ class Post_view extends CI_Controller {
 				$head['title'] = $post['title'];
 				$head['currentpage'] = null;
 				
+				$post['cap_user_details'] = $this->user->getid($post['cap_user']);
+				
 				preg_match_all('/<(p|li|h1|h2|h3|h4|h5|h6)>(.*?)<\/(\1)>/is', $post['content'], $post['paragraphs']);
 				
 				$post['comments'] = $this->db->where('post_id',$post['post_id'])->get('comments');
