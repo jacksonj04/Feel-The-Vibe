@@ -60,16 +60,18 @@
 		
 			<?php echo form_open(''); ?>
 			
-				<p>
-					<label for="submiturl" class="visuallyhidden">Enter a URL</label>
-					<input type="url" id="submiturl" name="url" placeholder="Enter a URL here…" class="text">
-					<input type="submit" value="Make this page commentable!" name="create" id="create">
-				</p>
+				<div id="multiaddlist">
+					
+					<p class="inputwrapper">
+						<input type="url" name="multiurl[]" placeholder="Enter a URL here…" class="text">
+					</p>
+					
+				</div>
 				
 				<p>
-					<a href="/createmulti">Click here if you want to create a multi page document?</a>
+					<input type="submit" value="Make a commentable document!" name="create" id="create">
 				</p>
-				
+								
 			</form>
 			
 			<?php echo form_close(); ?>

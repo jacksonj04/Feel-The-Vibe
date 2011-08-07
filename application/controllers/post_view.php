@@ -102,5 +102,19 @@ class Post_view extends CI_Controller {
 		$this->load->view('post/create', $data);
 		$this->load->view('inc/foot');
 	}
+	
+	function createmulti()
+	{
+		$data = array(
+			'success' => FALSE,
+			'error' => FALSE
+		);
+		
+		$head = array('currentpage' => 'create');
+		
+		$this->load->view('inc/head', $head);
+		$this->load->view('post/createmulti', $data);
+		$this->load->view('inc/foot');
+	}
 
 } // EOF

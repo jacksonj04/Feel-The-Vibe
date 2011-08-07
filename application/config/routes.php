@@ -48,6 +48,7 @@ $route['signout'] = 'signout/index';
 $route['ajax/(:any)'] = "ajax/$1";
 
 $route['create'] = 'post_view/create';
+$route['createmulti'] = 'post_view/createmulti';
 
 $route['about'] = 'home/about';
 $route['help'] = 'home/help';
