@@ -58,11 +58,22 @@
 	position: absolute;
 	right: 5px;
 	top: 6px;
+}
+
+.sharevibe .vibe-up, .sharevibe .vibe-down {
 	display: none;
 }
 
-.para:hover .sharevibe {
-	display: inline-block;
+.vibegivenup .sharevibe .vibe-up {
+	display: inline;
+}
+
+.vibegivendown .sharevibe .vibe-down {
+	display: inline;
+}
+
+.para:hover .sharevibe .vibe-up, .para:hover .sharevibe .vibe-down {
+	display: inline;
 }
 
 .no-js .sharevibe {
