@@ -65,15 +65,15 @@
 }
 
 .vibegivenup .sharevibe .vibe-up {
-	display: inline;
+	display: inline-block;
 }
 
 .vibegivendown .sharevibe .vibe-down {
-	display: inline;
+	display: inline-block;
 }
 
 .para:hover .sharevibe .vibe-up, .para:hover .sharevibe .vibe-down {
-	display: inline;
+	display: inline-block;
 }
 
 .no-js .sharevibe {
