@@ -43,6 +43,7 @@ $route['404_override'] = '';
 
 $route['signin'] = 'signin/index';
 $route['signin/auth'] = 'signin/auth';
+$route['signout'] = 'signout/index';
 
 $route['ajax/(:any)'] = "ajax/$1";
 
