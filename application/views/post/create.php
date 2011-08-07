@@ -71,11 +71,7 @@
 			</form>
 			
 			<?php echo form_close(); ?>
-			
-			<p>Want to make it even easier? Drag our bookmarklet (below) to your bookmarks bar!</p>
-			
-			<p><a style="padding:5px;background:#666;color:white;border-radius:5px;" href="javascript:(function(){var FTVForm=document.createElement('form');FTVForm.setAttribute('method','post');FTVForm.setAttribute('action','http://feelthevi.be/create');var FTVFieldURL=document.createElement('input');FTVFieldURL.setAttribute('type','hidden');FTVFieldURL.setAttribute('name','url');FTVFieldURL.setAttribute('value',window.location);FTVForm.appendChild(FTVFieldURL);var FTVFieldCreate=document.createElement('input');FTVFieldCreate.setAttribute('type','hidden');FTVFieldCreate.setAttribute('name','create');FTVFieldCreate.setAttribute('value','Create');FTVForm.appendChild(FTVFieldCreate);document.body.appendChild(FTVForm);FTVForm.submit();})()" title="feelthevi.be">Drag Me!</a></p>
-		
+					
 		<?php endif;
 		
 	}else{
