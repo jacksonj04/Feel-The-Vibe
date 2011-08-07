@@ -52,7 +52,11 @@
 		echo '<' . $paragraph_tag . ' data-vibe="'.$data_vibe.'" id="para_' . $paragraph_id . '" class="para ' . implode(' ', $paragraph_classes) . '">' . $paragraphs[2][$paragraph_id];
 		
 		if ($this->user->getcurrent()){
-			echo '<span class="sharevibe"><a href="#" class="vibe-up" data-paraid="'.$paragraph_id.'" title="I\'m feeling this!"></a><a href="#" title="I\'m not feeling this!" data-paraid="'.$paragraph_id.'" class="vibe-down"></a></span>';
+			echo '<span class="sharevibe">
+					<a href="#" class="vibe-up" data-paraid="'.$paragraph_id.'" title="I\'m feeling this!"></a>
+					<a href="#" title="I\'m not feeling this!" data-paraid="'.$paragraph_id.'" class="vibe-down"></a>
+				</span>
+				<a href="#" class="commentonme" data-paraid="'.$paragraph_id.'"><span></span>Comment</a>';
 		}
 		
 		echo '</' . $paragraph_tag . '>';
@@ -100,7 +104,7 @@
 			<form method="post">
 			
 				<p class="inputwrapper">
-					<label for="newcomment">Your comment</label><br>
+					<label for="newcomment">Add your comment</label><br>
 					<textarea name="newcomment" id="newcomment" class=""></textarea>
 					<input type="submit" value="Add comment" id="addnewcomment" name="addnewcomment">
 				</p>
