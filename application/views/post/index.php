@@ -63,8 +63,8 @@
 		
 		if ($this->user->getcurrent()){
 			echo '<span class="sharevibe">
-					<a href="#" class="vibe-up" data-paraid="'.$paragraph_id+1.'" title="I\'m feeling this!"></a>
-					<a href="#" title="I\'m not feeling this!" data-paraid="'.$paragraph_id+1.'" class="vibe-down"></a>
+					<a href="#" class="vibe-up" data-paraid="'.($paragraph_id+1).'" title="I\'m feeling this!"></a>
+					<a href="#" title="I\'m not feeling this!" data-paraid="'.($paragraph_id+1).'" class="vibe-down"></a>
 				</span>';
 		}
 		
