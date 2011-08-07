@@ -31,9 +31,7 @@ class Post_view extends CI_Controller {
 				preg_match_all('/<(p|li|h1|h2|h3|h4|h5|h6)>(.*?)<\/(\1)>/is', $post['content'], $post['paragraphs']);
 				
 				$post['comments'] = $this->post->comments($post['post_id']);
-				
-				die(print_r($post['comments']));
-				
+								
 				$this->load->view('inc/head', $head);
 				$this->load->view('post/index', $post);
 				$this->load->view('inc/foot');
