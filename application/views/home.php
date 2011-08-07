@@ -28,7 +28,7 @@
 
 <aside class="grid_4 last"> 
 	
-	<div class="box bg_light"> 
+	<div class="box bg_dark"> 
 	
 		<?php
 		
@@ -55,6 +55,10 @@
 	
 		?>
 	
+	</div>
+	
+	<div class="box bg_light">
+		This site was created at <a href="http://leedshack.com">Leeds Hack 2</a> over the weekend of 7th and 8th of August 2011.
 	</div>
 			
 </aside>
