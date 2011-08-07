@@ -64,11 +64,9 @@ $(function(){
 	
 	// Click on paragraph to expand comment accordion
 	$('.para').click(function(){
-	
 		var id = $(this).attr('id');
-		
 		$('#'+id+'_comments').click();
-		
+		window.location.href = window.location.href + '#para_' + id;
 	});
 
 });
