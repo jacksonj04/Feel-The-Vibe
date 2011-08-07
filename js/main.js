@@ -80,7 +80,7 @@ $(function(){
 		if (location.hash !== '#'+id)
 		{
 			
-			window.location.href = window.location.protocol + '://' + window.location.hostname + window.location.pathname + '#' + id;
+			window.location.href = window.location.protocol + '//' + window.location.hostname + window.location.pathname + '#' + id;
 		}
 	});
 	
