@@ -6,9 +6,11 @@ class Home extends CI_Controller {
 	{
 	
 		$head['currentpage'] = 'home';
+		
+		$data['recents'] = $this->db->order_by('generated','desc')->limit(5)->get('posts');
 	
 		$this->load->view('inc/head', $head);
-		$this->load->view('home');
+		$this->load->view('home', $data);
 		$this->load->view('inc/foot');
 	}
 	

@@ -4,7 +4,23 @@
 	
 	<p>Feel The Vibe lets you take any web page and turn it into a document you can comment on paragraph by paragraph. Take a news article and add your annotations and opinions, share your views on the latest government white paper, let people instantly comment on your work and more.</p>
 	
-	<p>Coming really really soon.</p>
+	<h2>Recent Documents</h2>
+	
+	<p>Here are the latest things that people have been commenting on.</p>
+	
+	<ul>
+	
+	<?php
+	
+	foreach ($recents->result() as $recent){
+	
+		echo '<li><a href="' . site_url($recent->series_id) . '">' . $recent->title . '</a></li>';
+	
+	}
+	
+	?>
+	
+	</ul>
 	
 </div> 
 
