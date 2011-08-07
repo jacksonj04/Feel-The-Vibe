@@ -147,6 +147,7 @@
 						{
 							foreach ($comments['-1'] as $comment)
 							{
+							print_r($comment);
 							?>
 							<div class="comment clearfix">
 								<a href="http://twitter.com/<?php echo $comment['twitter']; ?>" class="avatar">
@@ -207,6 +208,7 @@
 							{
 								foreach ($comments[$i] as $comment)
 								{
+									print_r($comment);
 								?>
 								<div class="comment clearfix">
 									<a href="http://twitter.com/<?php echo $comment['twitter']; ?>" class="avatar">
