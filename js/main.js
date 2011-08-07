@@ -59,7 +59,7 @@ $(function(){
 	
 	if ($('#allcommentcontainer').length == 1)
 	{
-		$('#allcommentcontainer').accordion();
+		$('#allcommentcontainer').accordion({ autoHeight: false });
 	}
 
 });
