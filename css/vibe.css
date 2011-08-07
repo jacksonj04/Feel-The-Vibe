@@ -123,8 +123,10 @@
 }
 
 #commentscontainer {
-	height: 200px;
+	height: 300px;
 	overflow: auto;
+	border-bottom: 10px solid #EEEEEE;
+    border-top: 10px solid #EEEEEE;
 }
 
 .ui-accordion .ui-accordion-content {
