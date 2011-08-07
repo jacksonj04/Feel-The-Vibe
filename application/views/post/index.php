@@ -108,26 +108,55 @@
 	
 	<div class="box bg_light" id="commentscontainer">
 		
-		<form method="post" hidden>
-			
-			<p class="inputwrapper">
-				<label for="newcomment">Add your comment</label><br>
-				<textarea name="newcomment" id="newcomment" class=""></textarea>
-				<input type="submit" value="Add comment" id="addnewcomment" name="addnewcomment">
-			</p>
-		
-		</form>
-		
 		<div id="allcommentcontainer">
 		
 			<h3><a href="#">General Comments</a></h3>
-			<div>Hello</div>
+			<div>
+				
+				<form method="post">
+			
+					<p class="inputwrapper">
+						<label for="newcomment">Add your comment</label><br>
+						<textarea name="newcomment" class="newcomment"></textarea>
+						<input type="submit" value="Add comment" class="addnewcomment" name="addnewcomment">
+					</p>
+				
+				</form>
+				
+				<div class="newcommentcontainer">
+
+					<div class="commentwindow">
+					
+					</div>
+					
+				</div>
+
+			
+			</div>
 			
 			<?php $i = 1; while ($i !== $num_paragraphs): ?>
 			
 				<h3><a href="#">Paragraph <?php echo $i; ?></a></h3>
 				<div>
-					Hello
+					
+					<form method="post">
+			
+						<p class="inputwrapper">
+							<label for="newcomment">Add your comment</label><br>
+							<textarea name="newcomment" class="newcomment"></textarea>
+							<input type="submit" value="Add comment" class="addnewcomment" name="addnewcomment">
+						</p>
+					
+					</form>
+					
+					<div class="newcommentcontainer">
+	
+						<div class="commentwindow">
+						
+						</div>
+						
+					</div>
+					
 				</div>
 						
 			<?php $i++; endwhile; ?>

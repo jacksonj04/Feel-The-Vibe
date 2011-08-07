@@ -80,15 +80,15 @@
 	display: none !important;
 }
 
-#newcomment {
+.newcomment {
 	height: 75px;
 }
 
-#addnewcomment {
-	width: 285px;
+.addnewcomment {
+	width: 265px;
 }
 
-#commentwindow {
+.commentwindow {
 	border-top: 1px solid #CCCCCC;
     height: 120px;
     margin-top: 10px;
