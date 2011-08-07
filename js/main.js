@@ -60,17 +60,9 @@ function vibeDown(e)
 	});
 }
 
-function prependComment(para, comment)
+function prependComment(para, comment, user)
 {
-	$('#commentwindow_'+para).prepend('<div class="comment clearfix">
-			<a href="#" class="avatar">
-				<img src="http://img.tweetimag.es/i/alexbilbie_m" />
-			</a>
-			<article>
-				<aside><a href="#">@alexbilbie</a> said:</aside>
-				'+comment+'
-			</article>
-		</div>');
+	$('#commentwindow_'+para).prepend('<div class="comment clearfix"><a href="#" class="avatar"><img src="http://img.tweetimag.es/i/'+user+'_m" /></a><article><aside><a href="http://twitter.com/'+user+'">@'+user+'</a> said:</aside>'+comment+'</article></div>');
 }
 
 $(function(){
@@ -141,7 +133,7 @@ $(function(){
 				{
 					if (resp.message == 'Comment added!')
 					{
-						prependComment(para, comment);
+						prependComment(para, comment, resp.twitter);
 					}
 					
 					else
