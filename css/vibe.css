@@ -82,11 +82,11 @@
 
 .newcomment {
 	height: 75px;
-	width: 245px;
+	width: 240px;
 }
 
 .addnewcomment {
-	width: 235px;
+	width: 250px;
 }
 
 .commentwindow {
@@ -125,4 +125,9 @@
 #commentscontainer {
 	height: 200px;
 	overflow: auto;
+}
+
+.ui-accordion .ui-accordion-content {
+	padding: 10px;
+	height: auto;
 }
