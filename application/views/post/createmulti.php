@@ -56,7 +56,11 @@
 		
 		<?php else: ?>
 		
-			<p>Tell us the address of the page you want to make commentable, then relax whilst we do some magic. Your page will be with you in a few seconds.</p>
+			<p>Tell us the address of the pages you want to make a commentable document out of, then relax whilst we do some magic. Your document will be with you in a few seconds.</p>
+			
+			<p>
+				N.B. Blank URL fields will be ignored
+			</p>
 		
 			<?php echo form_open(''); ?>
 			
