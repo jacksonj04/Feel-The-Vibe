@@ -277,8 +277,7 @@ if ($seriestotal != 1){
 	    $pagelinks[] = '<a href="' . site_url($series . '/' . $i) . '">' . $i . '</a>';
 	}
 
-	echo '<div class="grid_12"><p style="text-align:right;">Page ' . $seriesnumber . ' of ' . $seriestotal . '<br>
-	' . implode(', ', $pagelinks) . '</p>;
+	echo '<div class="grid_12"><p style="text-align:right;">Page ' . $seriesnumber . ' of ' . $seriestotal . '<br>' . implode(', ', $pagelinks) . '</p>';
 }
 			
 // EOF
