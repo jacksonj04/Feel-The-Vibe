@@ -160,8 +160,8 @@
 			
 						<p>
 							<label for="newcomment">Add your comment</label><br>
-							<textarea name="newcomment" class="newcomment"></textarea>
-							<input type="submit" value="Add comment" class="addnewcomment" name="addnewcomment">
+							<textarea name="newcomment" class="newcomment" id="para_newcomment_<?php echo $i; ?>"></textarea>
+							<input type="submit" value="Add comment" class="addnewcomment" name="addnewcomment" data-paraid="<?php echo $i; ?>">
 						</p>
 					
 					</form>

@@ -61,28 +61,6 @@ function vibeDown(e)
 }
 
 $(function(){
-
-	$('#toggleHeatMap').toggle(hideHeatMap, showHeatMap);
-	
-	$('.vibe-up').bind('click', vibeUp);
-	$('.vibe-down').bind('click', vibeDown);
-	
-	if ($('#allcommentcontainer').length == 1)
-	{
-		$('#allcommentcontainer').accordion({ autoHeight: false });
-	}
-	
-	// Click on paragraph to expand comment accordion
-	$('.para').click(function(){
-		var id = $(this).attr('id');
-		$('#'+id+'_comments').click();
-		
-		if (location.hash !== '#'+id)
-		{
-			
-			window.location.href = window.location.protocol + '//' + window.location.hostname + window.location.pathname + '#' + id;
-		}
-	});
 	
 	// Fake a click when the hash changes
 	$(window).hashchange(function(){
@@ -109,5 +87,44 @@ $(function(){
 	{
 		$('#commentscontainer').stop().animate({'top':'20px'});
 	}
+	
+		$('#toggleHeatMap').toggle(hideHeatMap, showHeatMap);
+	
+	$('.vibe-up').bind('click', vibeUp);
+	$('.vibe-down').bind('click', vibeDown);
+	
+	if ($('#allcommentcontainer').length == 1)
+	{
+		$('#allcommentcontainer').accordion({ autoHeight: false });
+	}
+	
+	// Click on paragraph to expand comment accordion
+	$('.para').click(function(){
+		var id = $(this).attr('id');
+		$('#'+id+'_comments').click();
+		
+		if (location.hash !== '#'+id)
+		{
+			
+			window.location.href = window.location.protocol + '//' + window.location.hostname + window.location.pathname + '#' + id;
+		}
+	});
+	
+	// Comment
+	$('.addnewcomment').bind('click', function(){
+	
+		var para = $(this).data('paraid');
+		var comment = $('#para_newcomment_'+para).val();
+		var postid = $('#viewer').data('postid');
+		
+		$.ajax({
+			type:	'POST',
+			url:	'/ajax/comment',
+			data:	'post='+postid+'&paragraph='+para+'&text='+comment,
+			dataType: 'json'
+		});
+	
+	});
+
 
 });
