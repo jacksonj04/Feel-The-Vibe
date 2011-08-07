@@ -62,6 +62,7 @@ $(function(){
 		$('#allcommentcontainer').accordion({ autoHeight: false });
 	}
 	
+	// Click on paragraph to expand comment accordion
 	$('.para').click(function(){
 	
 		var id = $(this).attr('id');
