@@ -2,7 +2,7 @@
 	<h1><?php echo $title; ?></h1>
 </div>
 
-<div class="grid_8" id="viewer"> 
+<div class="grid_8" id="viewer" data-postid="<?php echo $post_id; ?>"> 
 	
 	<?php
 	
