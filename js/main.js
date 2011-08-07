@@ -111,7 +111,9 @@ $(function(){
 	});
 	
 	// Comment
-	$('.addnewcomment').bind('click', function(){
+	$('.addnewcomment').bind('click', function(e){
+	
+		e.preventDefault();
 	
 		var para = $(this).data('paraid');
 		var comment = $('#para_newcomment_'+para).val();
