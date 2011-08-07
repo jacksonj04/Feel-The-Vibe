@@ -106,6 +106,30 @@
 				</p>
 			
 			</form>
+			
+			<div id="commentwindow">
+			
+				<div class="comment">
+					<a href="#" class="avatar">
+						<img src="http://img.tweetimag.es/i/alexbilbie_m" />
+					</a>
+					<article>
+						<aside>@alexbilbie said:</aside>
+						This is awesome.
+					</article>
+				</div>
+				
+				<div class="comment">
+					<a href="#" class="avatar">
+						<img src="http://img.tweetimag.es/i/alexbilbie_m" />
+					</a>
+					<article>
+						<aside>@alexbilbie said:</aside>
+						Lorem aye where there's muck there's brass sit amet, gerritetten breadcake elit. Nullam tha knows nisl nec gerritetten shu' thi gob appens as maybe Aliquam erat any rooad.
+					</article>
+				</div>
+			
+			</div>
 		
 		</div>
 		
