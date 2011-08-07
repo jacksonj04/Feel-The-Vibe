@@ -103,5 +103,11 @@ $(function(){
 		}
 		
 	}).hashchange();
+	
+	// Move comments window on load
+	if (window.pageYOffset > 180)
+	{
+		$('#commentscontainer').stop().animate({'top':'20px'});
+	}
 
 });
