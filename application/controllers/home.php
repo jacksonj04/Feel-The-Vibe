@@ -19,7 +19,7 @@ class Home extends CI_Controller {
 		$head['title'] = 'About';
 	
 		$this->load->view('inc/head', $head);
-		$this->load->view('home');
+		$this->load->view('about');
 		$this->load->view('inc/foot');
 	}
 	
@@ -30,7 +30,7 @@ class Home extends CI_Controller {
 		$head['title'] = 'Help';
 	
 		$this->load->view('inc/head', $head);
-		$this->load->view('home');
+		$this->load->view('help');
 		$this->load->view('inc/foot');
 	}
 }
