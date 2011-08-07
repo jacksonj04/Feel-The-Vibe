@@ -121,16 +121,16 @@
 		<div id="allcommentcontainer">
 		
 			<h3><a href="#">General Comments</a></h3>
-			<div>Hello <?php echo $num_paragraphs; ?></div>
+			<div>Hello</div>
 			
-			<?php for ($i = 1; $i == $num_paragraphs; $i++) { ?>
+			<?php $i = 1; while ($i !== $num_paragraphs): ?>
 			
 				<h3><a href="#">Paragraph <?php echo $i; ?></a></h3>
 				<div>
 					Hello
 				</div>
 						
-			<?php } ?>
+			<?php $i++; endwhile; ?>
 		
 		</div>
 		
